@@ -32,37 +32,37 @@ class C_login extends CI_Controller {
         redirect('C_siswa/dashboard_tekno');
 
       }elseif ($data['status']=='otkp') {
-        $this->session->set_userdata('pimpinan', true);
-        $this->session->set_userdata('ses_id', $data['id_user']);
+        $this->session->set_userdata('siswa', true);
+        $this->session->set_userdata('ses_id', $data['id_siswa']);
         $this->session->set_userdata('ses_username', $data['nisn_siswa']);
         redirect('C_pimpinan/dashboard');
 
       }elseif ($data['status']=='tkj') {
-        $this->session->set_userdata('pimpinan', true);
-        $this->session->set_userdata('ses_id', $data['id_user']);
+        $this->session->set_userdata('siswa', true);
+        $this->session->set_userdata('ses_id', $data['id_siswa']);
         $this->session->set_userdata('ses_username', $data['nisn_siswa']);
         redirect('C_pimpinan/dashboard');
 
       }elseif ($data['status']=='rpl') {
-        $this->session->set_userdata('pimpinan', true);
-        $this->session->set_userdata('ses_id', $data['id_user']);
+        $this->session->set_userdata('siswa', true);
+        $this->session->set_userdata('ses_id', $data['id_siswa']);
         $this->session->set_userdata('ses_username', $data['nisn_siswa']);
         redirect('C_pimpinan/dashboard');
 
       }elseif ($data['status']=='tkr') {
-        $this->session->set_userdata('pimpinan', true);
-        $this->session->set_userdata('ses_id', $data['id_user']);
+        $this->session->set_userdata('siswa', true);
+        $this->session->set_userdata('ses_id', $data['id_siswa']);
         $this->session->set_userdata('ses_username', $data['nisn_siswa']);
         redirect('C_pimpinan/dashboard');
 
       }elseif ($data['status']=='tpm') {
-        $this->session->set_userdata('pimpinan', true);
-        $this->session->set_userdata('ses_id', $data['id_user']);
+        $this->session->set_userdata('siswa', true);
+        $this->session->set_userdata('ses_id', $data['id_siswa']);
         $this->session->set_userdata('ses_username', $data['nisn_siswa']);
         redirect('C_pimpinan/dashboard');
 
       }else {
-        $url = base_url('C_login/siswa_tekno');
+        $url = base_url('C_login');
         echo $this->session->set_flashdata('msg', '
 
         <div class="alert alert-danger alert-dismissible fade show" role="alert">
@@ -79,7 +79,7 @@ class C_login extends CI_Controller {
       NISN atau Password Salah<br> Silahkan Login Kembali
     </div>
     ');
-    $url = base_url('C_login/siswa_tekno');
+    $url = base_url('C_login');
     redirect($url);
   }
 
