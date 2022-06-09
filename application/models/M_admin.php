@@ -10,6 +10,24 @@ class M_admin extends CI_Model{
     $hasil = $this->db->get('tb_admin')->result();
     return $hasil;
   }
+
+  public function guru_edit($id_admin)
+  {
+    $this->db->where('id_admin', $id_admin);
+    $hasil = $this->db->get('tb_admin')->result();
+    return $hasil;
+  }
+
+  function guru_edit_up($data_edit, $id_admin){
+    $this->db->where($id_admin);
+    $this->db->update('tb_admin',$data_edit);
+  }
+
+  public function guru_hapus($id_guru)
+  {
+    $this->db->where($id_guru);
+    $this->db->delete('tb_admin');
+  }
 // guru akhir
 
 
