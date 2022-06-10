@@ -1,5 +1,9 @@
 berisi view tampilan data sistem admin
 
+tampilan menu
+1. guru
+2. siswa
+3. kelas
 
 guru
 1. tampil data guru (admin/guru_tampil)
