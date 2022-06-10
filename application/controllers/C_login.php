@@ -88,7 +88,9 @@ class C_login extends CI_Controller {
 
   public function fa()
   {
-    $this->load->view('admin/index');
+    $this->load->view('admin/template/header-admin');
+    $this->load->view('admin/login');
+    $this->load->view('admin/template/header-admin');
   }
 
   public function admin_login()

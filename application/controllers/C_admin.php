@@ -44,7 +44,7 @@ class C_admin extends CI_Controller {
 		$id_kelas = $this->input->post('id_kelas');
 
 		$data_edit = array(
-			'nama_siswa' => $nama_siswa,
+			'nama_guru' => $nama_guru,
 			'username' => $username,
 			'id_kelas' => $id_kelas
 		);
@@ -59,7 +59,7 @@ class C_admin extends CI_Controller {
 								<span aria-hidden="true">&times;</span>
 							</button>
 						</div>');
-		redirect ('C_admin/guru_edit/'.$id_siswa);
+		redirect ('C_admin/guru_edit/'. $id_admin);
 	}
 
 
