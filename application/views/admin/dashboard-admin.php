@@ -1,7 +1,3 @@
-<?php
-
-include 'template/header-admin.php';
-?>
 
 <div class="text-center mt-5">
   <h1>Halaman Dashboard Wali Kelas</h1>
@@ -65,8 +61,3 @@ include 'template/header-admin.php';
     </div>
     <!-- /.container-fluid -->
 </section>
-
-
-<?php
-include 'template/footer-admin.php';
-?>

@@ -88,17 +88,17 @@ class C_login extends CI_Controller {
 
   public function fa()
   {
-    $this->load->view('admin/template/header-admin');
+    // $this->load->view('admin/template/header-admin');
     $this->load->view('admin/login');
-    $this->load->view('admin/template/header-admin');
+    // $this->load->view('admin/template/footer-admin');
   }
 
-  public function admin_login()
+  public function login_admin()
   {
     $username = htmlspecialchars($this->input->post('username', true), ENT_QUOTES);
     $password = htmlspecialchars($this->input->post('password', true), ENT_QUOTES);
 
-    $cek_login = $this->M_login->admin_login($username, $password);
+    $cek_login = $this->M_login->login_admin($username, $password);
 
     if ($cek_login->num_rows() > 0) {
       $data = $cek_login->row_array();

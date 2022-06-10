@@ -4,11 +4,13 @@ class M_admin extends CI_Model{
 
 // guru awal
 
-  public function guru_tampil()
+  public function walas_tampil()
   {
-    $this->db->where('status', 'guru');
-    $hasil = $this->db->get('tb_admin')->result();
-    return $hasil;
+    $this->db->select('*');
+    $this->db->from('tb_admin');
+    $this->db->join('tb_kelas','tb_admin.id_kelas = tb_kelas.id_kelas');
+    $query = $this->db->get()->result();
+    return $query;
   }
 
   public function guru_edit($id_admin)
@@ -17,6 +19,8 @@ class M_admin extends CI_Model{
     $hasil = $this->db->get('tb_admin')->result();
     return $hasil;
   }
+
+
 
   function guru_edit_up($data_edit, $id_admin){
     $this->db->where($id_admin);

@@ -6,17 +6,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Dashboard Guru</title>
 
-  <link rel="stylesheet" type="text/css" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="<?= base_url() ?>assets/css/bootstrap.min.css">
 
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
   <!-- Font Awesome -->
-  <link rel="stylesheet" href="../assets/data-table/css/all.min.css">
+  <link rel="stylesheet" href="<?= base_url() ?>assets/data-table/css/all.min.css">
   <!-- DataTables -->
-  <link rel="stylesheet" href="../assets/data-table/css/dataTables.bootstrap4.min.css">
-  <link rel="stylesheet" href="../assets/data-table/css/responsive.bootstrap4.min.css">
-  <link rel="stylesheet" href="../assets/data-table/css/buttons.bootstrap4.min.css">
+  <link rel="stylesheet" href="<?= base_url() ?>assets/data-table/css/dataTables.bootstrap4.min.css">
+  <link rel="stylesheet" href="<?= base_url() ?>assets/data-table/css/responsive.bootstrap4.min.css">
+  <link rel="stylesheet" href="<?= base_url() ?>assets/data-table/css/buttons.bootstrap4.min.css">
   <!-- Theme style -->
-  <link rel="stylesheet" href="../assets/data-table/css/adminlte.min.css">
+  <link rel="stylesheet" href="<?= base_url() ?>assets/data-table/css/adminlte.min.css">
+
 
 </head>
 <body>

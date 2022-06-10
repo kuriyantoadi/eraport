@@ -15,17 +15,24 @@ class C_admin extends CI_Controller {
 			}
 	}
 
-	public function index()
-	{
-    $this->load->view('C_admin/fa');
-  }
+
 
 // halaman guru awal
-	public function guru_tampil()
+public function index()
+{
+	$data['tampil'] = $this->M_admin->walas_tampil();
+
+	$this->load->view('template/header-admin');
+	$this->load->view('admin/walas_tampil',$data);
+	$this->load->view('template/footer-admin');
+}
+
+	public function walas_tambah()
 	{
-		$data['tampil'] = $this->M_admin->guru_tampil();
-    $this->load->view('admin/guru_tampil');
-  }
+		$this->load->view('template/header-admin');
+		$this->load->view('admin/walas_tambah');
+		$this->load->view('template/footer-admin');
+	}
 
 	public function guru_edit($id_admin)
 	{
