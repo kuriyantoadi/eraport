@@ -79,18 +79,112 @@ class C_admin extends CI_Controller {
 		redirect ('C_admin/siswa_tekno');
 	}
 
+	public function guru_pass($id_admin)
+	{
+		$data['tampil'] = $this->M_admin->guru_pass($id_admin);
+
+		$this->load->view('template/header-admin');
+		$this->load->view('admin/guru_pass', $data);
+		$this->load->view('template/footer-admin');
+	}
+
+	public function guru_pass_up()
+	{
+		$id_admin = $this->input->post('id_admin');
+		$pass = $this->input->post('password');
+		$password = sha1($pass);
+
+		$data_edit = array(
+			'password' => $password,
+		);
+
+		$this->M_admin->guru_edit_up($data_edit, $id_admin);
+
+		$this->session->set_flashdata('msg', '
+						<div class="alert alert-primary alert-dismissible fade show" role="alert">
+							<strong>Edit data berhasil</strong>
+
+							<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+								<span aria-hidden="true">&times;</span>
+							</button>
+						</div>');
+		redirect ('C_admin/guru_edit/'.$id_admin);
+	}
+
 	// halaman guru akhir
 
 
 	// halaman siswa awal
-		public function siswa_tampil()
-		{
-			$data['tampil'] = $this->M_admin->siswa_tampil();
+	public function siswa_tampil()
+	{
+		$data['tampil'] = $this->M_admin->siswa_tampil();
 
-	    $this->load->view('admin/siswa_tampil');
-	  }
+    $this->load->view('admin/siswa_tampil');
+  }
 
-		// halaman siswa akhir
+	public function siswa_edit($id_siswa)
+	{
+		$data['tampil'] = $this->M_admin->siswa_edit($id_siswa);
+
+		$this->load->view('template/header-admin');
+		$this->load->view('admin/siswa_edit', $data);
+		$this->load->view('template/footer-admin');
+	}
+
+	public function siswa_edit_up()
+	{
+		$id_siswa = $this->input->post('$id_siswa');
+		$nis = $this->input->post('nis');
+		$nisn = $this->input->post('nisn');
+		$nama_siswa = $this->input->post('nama_siswa');
+		$prog = $this->input->post('prog');
+		$kompetensi = $this->input->post('kompetensi');
+		$semester = $this->input->post('$semester');
+		$walas = $this->input->post('walas');
+		$nip = $this->input->post('nip');
+
+		$data_edit = array(
+			'nis' => $nis,
+			'nisn' => $nisn,
+			'nama_siswa' => $nama_siswa,
+			'prog' => $prog,
+			'kompetensi' => $kompetensi,
+			'semester' => $semester,
+			'walas' => $walas,
+			'nip' => $nip
+		);
+
+		$this->M_admin->siswa_edit_up($data_edit, $id_siswa);
+
+		$this->session->set_flashdata('msg', '
+						<div class="alert alert-primary alert-dismissible fade show" role="alert">
+							<strong>Edit data berhasil</strong>
+
+							<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+								<span aria-hidden="true">&times;</span>
+							</button>
+						</div>');
+		redirect ('C_admin/siswa_edit/'.$id_siswa);
+	}
+
+
+	public function siswa_hapus($id_siswa)
+	{
+		$id_siswa = array('id_siswa' => $id_siswa);
+
+		$success = $this->M_admin->siswa_hapus($id_siswa);
+		$this->session->set_flashdata('msg', '
+						<div class="alert alert-warning alert-dismissible fade show" role="alert">
+							<strong>Hapus Data Berhasil</strong>
+
+							<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+								<span aria-hidden="true">&times;</span>
+							</button>
+						</div>');
+		redirect ('C_admin/siswa_tampil');
+	}
+
+	// halaman siswa akhir
 
 
 	// halaman kelas awal
