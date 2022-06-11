@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dashboard Guru</title>
+  <title>E Raport</title>
 
   <link rel="stylesheet" type="text/css" href="<?= base_url() ?>assets/css/bootstrap.min.css">
 
@@ -18,6 +18,9 @@
   <!-- Theme style -->
   <link rel="stylesheet" href="<?= base_url() ?>assets/data-table/css/adminlte.min.css">
 
+  <!-- footer -->
+  <link rel="stylesheet" href="<?= base_url() ?>assets/css/footer.css">
+
 
 </head>
 <body>
@@ -28,16 +31,16 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item mx-2 fw-bold fs-5">
-            <a class="nav-link" href="dashboard-guru.php">Guru</a>
+          <li class="nav-item mx-1 fw-bold fs-5">
+            <a class="nav-link" href="<?= base_url() ?>C_admin">Wali Kelas</a>
           </li>
-          <li class="nav-item mx-2 fw-bold fs-5">
-            <a class="nav-link" href="dashboard-walas.php">Wali Kelas</a>
+          <li class="nav-item mx-1 fw-bold fs-5">
+            <a class="nav-link" href="<?= base_url() ?>C_admin/siswa_tampil">Siswa</a>
           </li>
-          <li class="nav-item mx-2 fw-bold fs-5">
-            <a class="nav-link" href="dashboard-siswa.php">Siswa</a>
+          <li class="nav-item mx-1 fw-bold fs-5">
+            <a class="nav-link" href="<?= base_url() ?>C_admin/kelas_tampil">Kelas</a>
           </li>
-          <li class="nav-item dropdown mx-2 fw-bold fs-5">
+          <!-- <li class="nav-item dropdown mx-1 fw-bold fs-5">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Kelas
             </a>
@@ -56,7 +59,7 @@
               <li><a class="dropdown-item" href="#">XI TKR</a></li>
               <li><a class="dropdown-item" href="#">XI TPM</a></li>
             </ul>
-          </li>
+          </li> -->
         </ul>
         <!-- <form class="d-flex" role="search">
           <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">

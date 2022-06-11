@@ -1,54 +1,57 @@
 <div class="text-center mt-5">
-  <h1>Halaman Wali Kelas</h1>
+  <h1>Halaman Kelas</h1>
 </div>
-
 
 <section class="content my-3">
     <div class="container">
-      <?= $this->session->flashdata('msg') ?>
-
         <div class="row">
         <div class="col-12">
             <div class="card">
             <div class="card-header">
-                <h3 class="card-title">Edit Wali Kelas</h3>
+                <h3 class="card-title">Tambah Kelas</h3>
             </div>
-
             <!-- /.card-header -->
             <div class="card-body">
-              <?php foreach ($tampil as $row) { ?>
-              <?= form_open('C_admin/walas_edit_up'); ?>
+
+              <?= form_open('C_admin/walas_tambah_up'); ?>
               <div class="form-horizontal">
                 <div class="card-body">
                   <div class="form-group row">
-                    <label for="inputEmail3" class="col-sm-2 col-form-label">Nama Guru</label>
+                    <label for="inputEmail3" class="col-sm-2 col-form-label">Nama Kelas</label>
                     <div class="col-sm-10">
-                      <input type="hidden" class="form-control" value="<?= $row->id_admin ?>" name="id_admin">
-                      <input type="text" class="form-control" id="inputEmail3" value="<?= $row->nama_guru ?>" name="nama_guru" placeholder="Nama Guru">
+                      <input type="text" class="form-control" id="inputEmail3" name="nama_kelas" placeholder="Nama Kelas" required>
                     </div>
                   </div>
                   <div class="form-group row">
-                    <label for="inputPassword3" class="col-sm-2 col-form-label">Username</label>
+                    <label for="inputEmail3" class="col-sm-2 col-form-label">Program Keahlian</label>
                     <div class="col-sm-10">
-                      <input type="text" class="form-control" id="inputPassword3" value="<?= $row->username ?>" name="username" placeholder="Username">
+                      <input type="text" class="form-control" id="inputEmail3" name="program_keahlian" placeholder="Program Keahlian" required>
                     </div>
                   </div>
-
                   <div class="form-group row">
-                    <label for="inputPassword3" class="col-sm-2 col-form-label">Kelas</label>
+                    <label for="inputEmail3" class="col-sm-2 col-form-label">Kompetensi Keahlian</label>
+                    <div class="col-sm-10">
+                      <div class="col-sm-10">
+                        <select name="id_kelas" class="form-control " style="width: 100%;" required>
+                          <option value="">Pilihan</option>
+                          <option value="10">Tingkat 10</option>
+                          <option value="11">Tingkat 11</option>
+                          <option value="12">Tingkat 12</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label for="inputPassword3" class="col-sm-2 col-form-label">Tingkat</label>
                     <div class="col-sm-10">
                       <select name="id_kelas" class="form-control " style="width: 100%;" required>
-                        <?php
-                         foreach ($tampil_kelas as $row) {
-                        ?>
-                        <option value="<?=  $row->id_kelas ?>">Pilihan Awal | <?= $row->nama_kelas ?></option>
-                        <option value="<?= $row->id_kelas ?>"><?= $row->nama_kelas ?></option>
-
-                        <?php } ?>
+                        <option value="">Pilihan</option>
+                        <option value="10">Tingkat 10</option>
+                        <option value="11">Tingkat 11</option>
+                        <option value="12">Tingkat 12</option>
                       </select>
                     </div>
                   </div>
-                <?php } ?>
                   <div class="form-group row">
                     <div class="offset-sm-2 col-sm-10">
                       <input type="submit" class="btn btn-info btn-sm" value="Simpan">

@@ -1,5 +1,5 @@
 <div class="text-center mt-5">
-  <h1>Halaman Wali Kelas</h1>
+  <h1>Halaman Siswa</h1>
 </div>
 
 <section class="content my-3">
@@ -8,32 +8,51 @@
         <div class="col-12">
             <div class="card">
             <div class="card-header">
-                <h3 class="card-title">Tambah Wali Kelas</h3>
+                <h3 class="card-title">Tambah Siswa</h3>
             </div>
             <!-- /.card-header -->
             <div class="card-body">
 
-              <?= form_open('C_admin/walas_tambah_up'); ?>
+              <?= form_open('C_admin/siswa_tambah_up'); ?>
               <div class="form-horizontal">
                 <div class="card-body">
                   <div class="form-group row">
-                    <label for="inputEmail3" class="col-sm-2 col-form-label">Nama Guru</label>
+                    <label for="inputEmail3" class="col-sm-2 col-form-label">Nama Siswa</label>
                     <div class="col-sm-10">
-                      <input type="text" class="form-control" id="inputEmail3" name="nama_guru" placeholder="Nama Guru" required>
+                      <input type="text" class="form-control" id="inputEmail3" name="nama_siswa" placeholder="Nama Siswa" required>
                     </div>
                   </div>
                   <div class="form-group row">
-                    <label for="inputPassword3" class="col-sm-2 col-form-label">Username</label>
+                    <label for="inputEmail3" class="col-sm-2 col-form-label">NIS</label>
                     <div class="col-sm-10">
-                      <input type="text" class="form-control" id="inputPassword3" name="username" placeholder="Username" required>
+                      <input type="text" class="form-control" id="inputEmail3" name="nis" placeholder="NIS" required>
                     </div>
                   </div>
                   <div class="form-group row">
-                    <label for="inputPassword3" class="col-sm-2 col-form-label">Password</label>
+                    <label for="inputEmail3" class="col-sm-2 col-form-label">NISN</label>
                     <div class="col-sm-10">
-                      <input type="text" class="form-control" id="inputPassword3" name="password" placeholder="Password" required>
+                      <input type="text" class="form-control" id="inputEmail3" name="nisn" placeholder="NISN" required>
                     </div>
                   </div>
+                  <div class="form-group row">
+                    <label for="inputEmail3" class="col-sm-2 col-form-label">Password</label>
+                    <div class="col-sm-10">
+                      <input type="text" class="form-control" id="inputEmail3" name="password" placeholder="Password" required>
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label for="inputPassword3" class="col-sm-2 col-form-label">Semester</label>
+                    <div class="col-sm-10">
+                      <select name="semester" class="form-control " style="width: 100%;" required>
+                        <?php
+                        for ($smstr=1; $smstr <= 6; $smstr++) {
+                        ?>
+                        <option value="<?= $smstr ?>">Semester <?= $smstr ?></option>
+                        <?php } ?>
+                      </select>
+                    </div>
+                  </div>
+
                   <div class="form-group row">
                     <label for="inputPassword3" class="col-sm-2 col-form-label">Kelas</label>
                     <div class="col-sm-10">
@@ -48,10 +67,11 @@
                       </select>
                     </div>
                   </div>
+
                   <div class="form-group row">
                     <div class="offset-sm-2 col-sm-10">
                       <input type="submit" class="btn btn-info btn-sm" value="Simpan">
-                      <a href="<?= base_url() ?>C_admin" class="btn btn-sm btn-warning">Kembali</a>
+                      <a href="<?= base_url() ?>C_admin/siswa_tampil" class="btn btn-sm btn-warning">Kembali</a>
                     </div>
                   </div>
 
