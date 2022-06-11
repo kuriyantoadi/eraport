@@ -64,6 +64,11 @@
             </ul>
           </li> -->
         </ul>
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item mx-2 fw-bold fs-5">
+                <a class="nav-link" href="#">Logout</a>
+            </li>
+        </ul>
         <!-- <form class="d-flex" role="search">
           <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
           <button class="btn btn-outline-success" type="submit">Search</button>
