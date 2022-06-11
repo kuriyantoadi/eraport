@@ -23,56 +23,42 @@
 
 
 </head>
-<body>
-  <nav class="navbar navbar-expand-lg bg-light">
+<body class="hold-transition layout-top-nav">
+<div class="wrapper">
+  <nav class="main-header navbar navbar-expand-md navbar-light navbar-white">
     <div class="container">
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <a href="" class="navbar-brand">
+        <span class="brand-text font-weight-light">E-Raport</span>
+      </a>
+
+      <button class="navbar-toggler order-1" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item mx-1 fw-bold fs-5">
-            <a class="nav-link" href="<?= base_url() ?>C_admin">Wali Kelas</a>
+
+      <div class="collapse navbar-collapse order-3" id="navbarCollapse">
+        <!-- Left navbar links -->
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a href="<?= base_url() ?>C_admin" class="nav-link">Wali Kelas</a>
           </li>
-          <li class="nav-item mx-1 fw-bold fs-5">
-            <a class="nav-link" href="<?= base_url() ?>C_admin/siswa_tampil">Siswa</a>
+          <li class="nav-item">
+            <a href="<?= base_url() ?>C_admin/siswa_tampil" class="nav-link">Siswa</a>
           </li>
-          <li class="nav-item mx-1 fw-bold fs-5">
-            <a class="nav-link" href="<?= base_url() ?>C_admin/kelas_tampil">Kelas</a>
+          <li class="nav-item">
+            <a href="<?= base_url() ?>C_admin/mapel_tampil" class="nav-link">Mapel</a>
           </li>
-          <li class="nav-item mx-1 fw-bold fs-5">
-            <a class="nav-link" href="<?= base_url() ?>C_admin/mapel_tampil">Mapel</a>
+          <li class="nav-item">
+            <a href="<?= base_url() ?>C_admin/kelas_tampil" class="nav-link">Kelas</a>
           </li>
-          <!-- <li class="nav-item dropdown mx-1 fw-bold fs-5">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Kelas
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="#">X AKL</a></li>
-              <li><a class="dropdown-item" href="#">X OTKP</a></li>
-              <li><a class="dropdown-item" href="#">X RPL</a></li>
-              <li><a class="dropdown-item" href="#">X TKJ</a></li>
-              <li><a class="dropdown-item" href="#">X TKR</a></li>
-              <li><a class="dropdown-item" href="#">X TPM</a></li>
-              <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="#">XI AKL</a></li>
-              <li><a class="dropdown-item" href="#">XI OTKP</a></li>
-              <li><a class="dropdown-item" href="#">XI RPL</a></li>
-              <li><a class="dropdown-item" href="#">XI TKJ</a></li>
-              <li><a class="dropdown-item" href="#">XI TKR</a></li>
-              <li><a class="dropdown-item" href="#">XI TPM</a></li>
-            </ul>
-          </li> -->
         </ul>
-        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-            <li class="nav-item mx-2 fw-bold fs-5">
-                <a class="nav-link" href="#">Logout</a>
-            </li>
-        </ul>
-        <!-- <form class="d-flex" role="search">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success" type="submit">Search</button>
-        </form> -->
       </div>
+
+      <!-- Right navbar links -->
+      <ul class="order-1 order-md-3 navbar-nav navbar-no-expand ml-auto">
+        <li class="nav-item">
+          <a href="<?= base_url() ?>C_login/admin_logout" class="nav-link">Keluar</a>
+        </li>
+
+      </ul>
     </div>
   </nav>
