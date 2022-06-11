@@ -82,7 +82,48 @@ class M_admin extends CI_Model{
     $hasil = $this->db->get('tb_kelas')->result();
     return $hasil;
   }
+
+  function kelas_tambah_up($data_tambah){
+    $this->db->insert('tb_kelas',$data_tambah);
+  }
+
+  function kelas_edit_up($data_edit, $id_kelas){
+    $this->db->where('id_kelas',$id_kelas);
+    $this->db->update('tb_kelas',$data_edit);
+  }
 // kelas akhir
+
+// mapel awal
+function mapel_tampil(){
+  $this->db->select('*');
+  $this->db->from('tb_mapel');
+  $this->db->join('tb_kelas','tb_mapel.id_kelas = tb_kelas.id_kelas');
+  $query = $this->db->get()->result();
+  return $query;
+}
+
+public function mapel_edit($id_mapel)
+{
+  $this->db->where('id_mapel', $id_mapel);
+  $hasil = $this->db->get('tb_mapel')->result();
+  return $hasil;
+}
+
+function mapel_tambah_up($data_tambah){
+  $this->db->insert('tb_mapel',$data_tambah);
+}
+
+function mapel_edit_up($data_edit, $id_mapel){
+  $this->db->where('id_mapel',$id_mapel);
+  $this->db->update('tb_mapel',$data_edit);
+}
+
+public function mapel_hapus($id_mapel)
+{
+  $this->db->where($id_mapel);
+  $this->db->delete('tb_mapel');
+}
+// mapel akhir
 
 }
 

@@ -40,6 +40,9 @@
           <li class="nav-item mx-1 fw-bold fs-5">
             <a class="nav-link" href="<?= base_url() ?>C_admin/kelas_tampil">Kelas</a>
           </li>
+          <li class="nav-item mx-1 fw-bold fs-5">
+            <a class="nav-link" href="<?= base_url() ?>C_admin/mapel_tampil">Mapel</a>
+          </li>
           <!-- <li class="nav-item dropdown mx-1 fw-bold fs-5">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Kelas

@@ -15,8 +15,6 @@ class C_admin extends CI_Controller {
 			}
 	}
 
-
-
 // halaman guru awal
 public function index()
 {
@@ -320,6 +318,33 @@ public function index()
 			$this->load->view('template/footer-admin');
 		}
 
+		public function kelas_tambah_up()
+		{
+			$tingkat = $this->input->post('tingkat');
+			$nama_kelas = $this->input->post('nama_kelas');
+			$kompetensi_keahlian = $this->input->post('kompetensi_keahlian');
+			$program_keahlian = $this->input->post('program_keahlian');
+
+			$data_tambah = array(
+				'nama_kelas' => $nama_kelas,
+				'tingkat' => $tingkat,
+				'kompetensi_keahlian' => $kompetensi_keahlian,
+				'program_keahlian' => $program_keahlian
+			);
+
+			$this->M_admin->kelas_tambah_up($data_tambah);
+
+			$this->session->set_flashdata('msg', '
+							<div class="alert alert-info alert-dismissible fade show" role="alert">
+								<strong>Edit data berhasil</strong>
+
+								<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+									<span aria-hidden="true">&times;</span>
+								</button>
+							</div>');
+			redirect ('C_admin/kelas_tampil');
+		}
+
 		public function kelas_edit($id_kelas)
 		{
 			$data['tampil'] = $this->M_admin->kelas_edit($id_kelas);
@@ -363,7 +388,7 @@ public function index()
 		{
 			$id_kelas = array('id_kelas' => $id_kelas);
 
-			$success = $this->M_admin->guru_hapus($id_kelas);
+			$success = $this->M_admin->kelas_hapus($id_kelas);
 			$this->session->set_flashdata('msg', '
 							<div class="alert alert-warning alert-dismissible fade show" role="alert">
 								<strong>Hapus Data Berhasil</strong>
@@ -378,6 +403,103 @@ public function index()
 
 		// halaman kelas akhir
 
+		//mapel awal
+		public function mapel_tampil()
+		{
+			$data['tampil'] = $this->M_admin->mapel_tampil();
 
+			$this->load->view('template/header-admin');
+			$this->load->view('admin/mapel_tampil',$data);
+			$this->load->view('template/footer-admin');
+		}
+
+		public function mapel_tambah()
+		{
+			$data['tampil_kelas'] = $this->M_admin->kelas_tampil();
+
+			$this->load->view('template/header-admin');
+			$this->load->view('admin/mapel_tambah',$data);
+			$this->load->view('template/footer-admin');
+		}
+
+		public function mapel_tambah_up()
+		{
+			$nama_mapel = $this->input->post('nama_mapel');
+			$id_kelas = $this->input->post('id_kelas');
+			$semester = $this->input->post('semester');
+
+			$data_tambah = array(
+				'nama_mapel' => $nama_mapel,
+				'id_kelas' => $id_kelas,
+				'semester' => $semester
+			);
+
+			$this->M_admin->mapel_tambah_up($data_tambah);
+
+			$this->session->set_flashdata('msg', '
+							<div class="alert alert-info alert-dismissible fade show" role="alert">
+								<strong>Edit data berhasil</strong>
+
+								<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+									<span aria-hidden="true">&times;</span>
+								</button>
+							</div>');
+			redirect ('C_admin/mapel_tampil');
+		}
+
+		public function mapel_edit($id_mapel)
+		{
+			$data['tampil'] = $this->M_admin->mapel_edit($id_mapel);
+			$data['tampil_kelas'] = $this->M_admin->kelas_tampil();
+
+			$this->load->view('template/header-admin');
+			$this->load->view('admin/mapel_edit', $data);
+			$this->load->view('template/footer-admin');
+		}
+
+		public function mapel_edit_up()
+		{
+			$id_mapel = $this->input->post('id_mapel');
+			$nama_mapel = $this->input->post('nama_mapel');
+			$id_kelas = $this->input->post('id_kelas');
+			$semester = $this->input->post('semester');
+
+			$data_edit = array(
+				'nama_mapel' => $nama_mapel,
+				'id_kelas' => $id_kelas,
+				'semester' => $semester
+			);
+
+			$this->M_admin->mapel_edit_up($data_edit, $id_mapel);
+
+			$this->session->set_flashdata('msg', '
+							<div class="alert alert-primary alert-dismissible fade show" role="alert">
+								<strong>Edit data berhasil</strong>
+
+								<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+									<span aria-hidden="true">&times;</span>
+								</button>
+							</div>');
+			redirect ('C_admin/mapel_tampil/');
+		}
+
+
+		public function mapel_hapus($id_mapel)
+		{
+			$id_mapel = array('id_mapel' => $id_mapel);
+
+			$success = $this->M_admin->mapel_hapus($id_mapel);
+			$this->session->set_flashdata('msg', '
+							<div class="alert alert-danger alert-dismissible fade show" role="alert">
+								<strong>Hapus Data Berhasil</strong>
+
+								<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+									<span aria-hidden="true">&times;</span>
+								</button>
+							</div>');
+			redirect ('C_admin/mapel_tampil');
+		}
+
+		//mapel awal
 
 }
