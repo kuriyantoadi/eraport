@@ -1,3 +1,6 @@
+<p class="footer">Page rendered in <strong>{elapsed_time}</strong> seconds. Dikembangkan oleh Tim IT SMK Negeri 1 Kragilan</p>
+
+
 <script src="<?= base_url() ?>assets/js/bootstrap.bundle.min.js"></script>
 
   <!-- jQuery -->

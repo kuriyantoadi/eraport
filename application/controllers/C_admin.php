@@ -29,21 +29,51 @@ public function index()
 
 	public function walas_tambah()
 	{
+		$data['tampil_kelas'] = $this->M_admin->kelas_tampil();
+
 		$this->load->view('template/header-admin');
-		$this->load->view('admin/walas_tambah');
+		$this->load->view('admin/walas_tambah',$data);
 		$this->load->view('template/footer-admin');
 	}
 
-	public function guru_edit($id_admin)
+	public function walas_tambah_up()
 	{
-		$data['tampil'] = $this->M_admin->guru_edit($id_admin);
+		$nama_guru = $this->input->post('nama_guru');
+		$username = $this->input->post('username');
+		$password = $this->input->post('password');
+		$id_kelas = $this->input->post('id_kelas');
+
+		$data_tambah = array(
+			'nama_guru' => $nama_guru,
+			'username' => $username,
+			'id_kelas' => $id_kelas,
+			'password' => sha1($password),
+		);
+
+		$this->M_admin->walas_tambah_up($data_tambah);
+
+		$this->session->set_flashdata('msg', '
+						<div class="alert alert-info alert-dismissible fade show" role="alert">
+							<strong>Edit data berhasil</strong>
+
+							<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+								<span aria-hidden="true">&times;</span>
+							</button>
+						</div>');
+		redirect ('C_admin');
+	}
+
+	public function walas_edit($id_admin)
+	{
+		$data['tampil'] = $this->M_admin->walas_edit($id_admin);
+		$data['tampil_kelas'] = $this->M_admin->kelas_tampil();
 
 		$this->load->view('template/header-admin');
-		$this->load->view('admin/siswa_edit_tekno', $data);
+		$this->load->view('admin/walas_edit', $data);
 		$this->load->view('template/footer-admin');
 	}
 
-	public function guru_edit_up()
+	public function walas_edit_up()
 	{
 		$id_admin = $this->input->post('id_admin');
 		$nama_guru = $this->input->post('nama_guru');
@@ -56,7 +86,7 @@ public function index()
 			'id_kelas' => $id_kelas
 		);
 
-		$this->M_admin->guru_edit_up($data_edit, $id_admin);
+		$this->M_admin->walas_edit_up($data_edit, $id_admin);
 
 		$this->session->set_flashdata('msg', '
 						<div class="alert alert-primary alert-dismissible fade show" role="alert">
@@ -66,56 +96,56 @@ public function index()
 								<span aria-hidden="true">&times;</span>
 							</button>
 						</div>');
-		redirect ('C_admin/guru_edit/'. $id_admin);
+		redirect ('C_admin/walas_edit/'.$id_admin);
 	}
 
 
-	public function guru_hapus($id_admin)
+	public function walas_hapus($id_admin)
 	{
-		$id_admin = array('id_guru' => $id_admin);
+		$id_admin = array('id_admin' => $id_admin);
 
-		$success = $this->M_admin->guru_hapus($id_admin);
+		$success = $this->M_admin->walas_hapus($id_admin);
 		$this->session->set_flashdata('msg', '
-						<div class="alert alert-warning alert-dismissible fade show" role="alert">
+						<div class="alert alert-danger alert-dismissible fade show" role="alert">
 							<strong>Hapus Data Berhasil</strong>
 
 							<button type="button" class="close" data-dismiss="alert" aria-label="Close">
 								<span aria-hidden="true">&times;</span>
 							</button>
 						</div>');
-		redirect ('C_admin/siswa_tekno');
+		redirect ('C_admin');
 	}
 
-	public function guru_pass($id_admin)
+	public function walas_pass($id_admin)
 	{
-		$data['tampil'] = $this->M_admin->guru_pass($id_admin);
+		$data['tampil'] = $this->M_admin->walas_edit($id_admin);
 
 		$this->load->view('template/header-admin');
-		$this->load->view('admin/guru_pass', $data);
+		$this->load->view('admin/walas_pass', $data);
 		$this->load->view('template/footer-admin');
 	}
 
-	public function guru_pass_up()
+	public function walas_pass_up()
 	{
 		$id_admin = $this->input->post('id_admin');
-		$pass = $this->input->post('password');
-		$password = sha1($pass);
+		$password = $this->input->post('password');
 
 		$data_edit = array(
-			'password' => $password,
+			'password' => sha1($password),
 		);
 
-		$this->M_admin->guru_edit_up($data_edit, $id_admin);
+		$this->M_admin->walas_edit_up($data_edit, $id_admin);
 
 		$this->session->set_flashdata('msg', '
-						<div class="alert alert-primary alert-dismissible fade show" role="alert">
+						<div class="alert alert-warning alert-dismissible fade show" role="alert">
 							<strong>Edit data berhasil</strong>
 
 							<button type="button" class="close" data-dismiss="alert" aria-label="Close">
 								<span aria-hidden="true">&times;</span>
 							</button>
-						</div>');
-		redirect ('C_admin/guru_edit/'.$id_admin);
+						</div>'
+					);
+		redirect ('C_admin');
 	}
 
 	// halaman guru akhir
@@ -126,12 +156,16 @@ public function index()
 	{
 		$data['tampil'] = $this->M_admin->siswa_tampil();
 
-    $this->load->view('admin/siswa_tampil');
+		$this->load->view('template/header-admin');
+    $this->load->view('admin/siswa_tampil',$data);
+		$this->load->view('template/footer-admin');
+
   }
 
 	public function siswa_edit($id_siswa)
 	{
 		$data['tampil'] = $this->M_admin->siswa_edit($id_siswa);
+		$data['tampil_kelas'] = $this->M_admin->kelas_tampil();
 
 		$this->load->view('template/header-admin');
 		$this->load->view('admin/siswa_edit', $data);
@@ -140,25 +174,19 @@ public function index()
 
 	public function siswa_edit_up()
 	{
-		$id_siswa = $this->input->post('$id_siswa');
+		$id_siswa = $this->input->post('id_siswa');
 		$nis = $this->input->post('nis');
 		$nisn = $this->input->post('nisn');
 		$nama_siswa = $this->input->post('nama_siswa');
-		$prog = $this->input->post('prog');
-		$kompetensi = $this->input->post('kompetensi');
-		$semester = $this->input->post('$semester');
-		$walas = $this->input->post('walas');
-		$nip = $this->input->post('nip');
+		$id_kelas = $this->input->post('id_kelas');
+		$semester = $this->input->post('semester');
 
 		$data_edit = array(
 			'nis' => $nis,
 			'nisn' => $nisn,
 			'nama_siswa' => $nama_siswa,
-			'prog' => $prog,
-			'kompetensi' => $kompetensi,
+			'id_kelas' => $id_kelas,
 			'semester' => $semester,
-			'walas' => $walas,
-			'nip' => $nip
 		);
 
 		$this->M_admin->siswa_edit_up($data_edit, $id_siswa);
@@ -181,8 +209,90 @@ public function index()
 
 		$success = $this->M_admin->siswa_hapus($id_siswa);
 		$this->session->set_flashdata('msg', '
-						<div class="alert alert-warning alert-dismissible fade show" role="alert">
+						<div class="alert alert-danger alert-dismissible fade show" role="alert">
 							<strong>Hapus Data Berhasil</strong>
+
+							<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+								<span aria-hidden="true">&times;</span>
+							</button>
+						</div>');
+		redirect ('C_admin/siswa_tampil');
+	}
+
+
+	public function siswa_pass($id_siswa)
+	{
+		$data['tampil'] = $this->M_admin->siswa_edit($id_siswa);
+
+		$this->load->view('template/header-admin');
+		$this->load->view('admin/siswa_pass', $data);
+		$this->load->view('template/footer-admin');
+	}
+
+	public function siswa_pass_up()
+	{
+		$id_siswa = $this->input->post('id_siswa');
+		$nis = $this->input->post('nis');
+		$nisn = $this->input->post('nisn');
+		$nama_siswa = $this->input->post('nama_siswa');
+		$id_kelas = $this->input->post('id_kelas');
+		$semester = $this->input->post('semester');
+
+		$data_edit = array(
+			'nis' => $nis,
+			'nisn' => $nisn,
+			'nama_siswa' => $nama_siswa,
+			'id_kelas' => $id_kelas,
+			'semester' => $semester,
+		);
+
+		$this->M_admin->siswa_edit_up($data_edit, $id_siswa);
+
+		$this->session->set_flashdata('msg', '
+						<div class="alert alert-warning alert-dismissible fade show" role="alert">
+							<strong>Edit data berhasil</strong>
+
+							<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+								<span aria-hidden="true">&times;</span>
+							</button>
+						</div>'
+					);
+		redirect ('C_admin/siswa_tampil');
+	}
+
+	public function siswa_tambah()
+	{
+		$data['tampil_kelas'] = $this->M_admin->kelas_tampil();
+
+		$this->load->view('template/header-admin');
+		$this->load->view('admin/siswa_tambah',$data);
+		$this->load->view('template/footer-admin');
+	}
+
+	public function siswa_tambah_up()
+	{
+		$nis = $this->input->post('nis');
+		$nisn = $this->input->post('nisn');
+		$password = $this->input->post('password');
+		$nama_siswa = $this->input->post('nama_siswa');
+		$id_kelas = $this->input->post('id_kelas');
+		$semester = $this->input->post('semester');
+
+		$data_tambah = array(
+			'nis' => $nis,
+			'nisn' => $nisn,
+			'nama_siswa' => $nama_siswa,
+			'semester' => $semester,
+			'password' => sha1($password),
+			'id_kelas' => $id_kelas,
+			'status' => 'siswa'
+		);
+
+		$this->M_admin->siswa_tambah_up($data_tambah);
+
+		$this->session->set_flashdata('msg', '
+						<div class="alert alert-info alert-dismissible fade show" role="alert">
+							<strong>Edit data berhasil</strong>
 
 							<button type="button" class="close" data-dismiss="alert" aria-label="Close">
 								<span aria-hidden="true">&times;</span>
@@ -195,12 +305,20 @@ public function index()
 
 
 	// halaman kelas awal
-		public function tampil_kelas()
+		public function kelas_tampil()
 		{
-			$data['tampil'] = $this->M_admin->tampil_kelas();
-	    $this->load->view('admin/tampil_kelas');
+			$data['tampil'] = $this->M_admin->kelas_tampil();
+			$this->load->view('template/header-admin');
+	    $this->load->view('admin/kelas_tampil', $data);
+			$this->load->view('template/footer-admin');
 	  }
 
+		public function kelas_tambah()
+		{
+			$this->load->view('template/header-admin');
+			$this->load->view('admin/kelas_tambah');
+			$this->load->view('template/footer-admin');
+		}
 
 		public function kelas_edit($id_kelas)
 		{
@@ -216,10 +334,15 @@ public function index()
 			$id_kelas = $this->input->post('id_kelas');
 			$tingkat = $this->input->post('tingkat');
 			$nama_kelas = $this->input->post('nama_kelas');
+			$kompetensi_keahlian = $this->input->post('kompetensi_keahlian');
+			$program_keahlian = $this->input->post('program_keahlian');
+
 
 			$data_edit = array(
 				'nama_kelas' => $nama_kelas,
-				'tingkat' => $tingkat
+				'tingkat' => $tingkat,
+				'kompetensi_keahlian' => $kompetensi_keahlian,
+				'program_keahlian' => $program_keahlian
 			);
 
 			$this->M_admin->kelas_edit_up($data_edit, $id_kelas);
