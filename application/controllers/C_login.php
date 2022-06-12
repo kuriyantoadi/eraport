@@ -107,6 +107,7 @@ class C_login extends CI_Controller {
         $this->session->set_userdata('wali_kelas', true);
         $this->session->set_userdata('ses_id', $data['id_admin']);
         $this->session->set_userdata('ses_user', $data['username']);
+        $this->session->set_userdata('ses_id_kelas', $data['id_kelas']);
         redirect('C_walas');
 
       }elseif ($data['status']=='admin') {
