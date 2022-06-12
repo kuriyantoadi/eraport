@@ -57,13 +57,223 @@
                     <div class="col-sm-10">
                       <select name="id_kelas" class="form-control " style="width: 100%;" required>
                         <?php
-                         foreach ($tampil_kelas as $row) {
+                          foreach ($tampil_kelas as $row) {
                         ?>
                         <option value="<?=  $row->id_kelas ?>">Pilihan Awal | <?= $row->nama_kelas ?></option>
                         <option value="<?= $row->id_kelas ?>"><?= $row->nama_kelas ?></option>
 
                         <?php } ?>
                       </select>
+                    </div>
+                  </div>
+
+                  <div class="form-group row mb-4">
+                    <label for="inputEmail3" class="col-sm-2 col-form-label">Catatan Akademik</label>
+                    <div class="col-sm-10">
+                      <input type="text" class="form-control" id="inputEmail3" value="<?= $row->catatan_akademik ?>" name="catatan_akademik" placeholder="Catatan Akademik" required>
+                    </div>
+                  </div>
+
+                  <div class="form-group row mb-4">
+                    <label for="inputEmail3" class="col-sm-2 col-form-label">PKL Mitra DU/DI</label>
+                    <div class="col-sm-10">
+                      <input type="text" class="form-control" id="inputEmail3" value="<?= $row->pkl_mitra_du_di ?>" name="pkl_mitra_du_di" placeholder="PKL Mitra DU/DI" required>
+                    </div>
+                  </div>
+
+                  <div class="form-group row mb-4">
+                    <label for="inputEmail3" class="col-sm-2 col-form-label">Lokasi PKL</label>
+                    <div class="col-sm-10">
+                      <input type="text" class="form-control" id="inputEmail3" value="<?= $row->pkl_lokasi ?>" name="pkl_lokasi" placeholder="Lokasi PKL" required>
+                    </div>
+                  </div>
+
+                  <div class="form-group row mb-4">
+                    <label for="inputEmail3" class="col-sm-2 col-form-label">Lamanya PKL</label>
+                    <div class="col-sm-10">
+                      <input type="text" class="form-control" id="inputEmail3" value="<?= $row->pkl_lamanya ?>" name="pkl_lamanya" placeholder="Lamanya PKL" required>
+                    </div>
+                  </div>
+
+                  <div class="form-group row mb-4">
+                    <label for="inputEmail3" class="col-sm-2 col-form-label">Keterangan PKL</label>
+                    <div class="col-sm-10">
+                      <input type="text" class="form-control" id="inputEmail3" value="<?= $row->pkl_keterangan ?>" name="pkl_keterangan" placeholder="Keterangan PKL" required>
+                    </div>
+                  </div>
+                  
+                  <div class="form-group row mb-4">
+                    <label for="inputEmail3" class="col-sm-2 col-form-label">Ekstrakurikurel 1</label>
+                    <div class="col-sm-10">
+                      <input type="text" class="form-control" id="inputEmail3" value="<?= $row->ekskul_1 ?>" name="ekskul_1" placeholder="Ekstrakurikurel 1" required>
+                    </div>
+                  </div>
+
+                  <div class="form-group row mb-4">
+                    <label for="inputEmail3" class="col-sm-2 col-form-label">Keterangan Ekstrakurikurel 1</label>
+                    <div class="col-sm-10">
+                      <input type="text" class="form-control" id="inputEmail3" value="<?= $row->ekskul_1_ket ?>" name="ekskul_1_ket" placeholder="Keterangan Ekstrakurikurel 1" required>
+                    </div>
+                  </div>
+
+                  <div class="form-group row mb-4">
+                    <label for="inputEmail3" class="col-sm-2 col-form-label">Ekstrakurikurel 2</label>
+                    <div class="col-sm-10">
+                      <input type="text" class="form-control" id="inputEmail3" value="<?= $row->ekskul_2 ?>" name="ekskul_2" placeholder="Ekstrakurikurel 2" required>
+                    </div>
+                  </div>
+
+                  <div class="form-group row mb-4">
+                    <label for="inputEmail3" class="col-sm-2 col-form-label">Keterangan Ekstrakurikurel 2</label>
+                    <div class="col-sm-10">
+                      <input type="text" class="form-control" id="inputEmail3" value="<?= $row->ekskul_2_ket ?>" name="ekskul_2_ket" placeholder="Keterangan Ekstrakurikurel 2" required>
+                    </div>
+                  </div>
+
+                  <div class="form-group row mb-4">
+                    <label for="inputEmail3" class="col-sm-2 col-form-label">Ekstrakurikurel 3</label>
+                    <div class="col-sm-10">
+                      <input type="text" class="form-control" id="inputEmail3" value="<?= $row->ekskul_3 ?>" name="ekskul_3" placeholder="Ekstrakurikurel 3" required>
+                    </div>
+                  </div>
+
+                  <div class="form-group row mb-4">
+                    <label for="inputEmail3" class="col-sm-2 col-form-label">Keterangan Ekstrakurikurel 3</label>
+                    <div class="col-sm-10">
+                      <input type="text" class="form-control" id="inputEmail3" value="<?= $row->ekskul_3_ket ?>" name="ekskul_3_ket" placeholder="Keterangan Ekstrakurikurel 3" required>
+                    </div>
+                  </div>
+
+                  <div class="form-group row mb-4">
+                    <label for="inputEmail3" class="col-sm-2 col-form-label">Kehadiran Sakit</label>
+                    <div class="col-sm-10">
+                      <input type="number" class="form-control" id="inputEmail3" value="<?= $row->kehadiran_sakit ?>" name="kehadiran_sakit" placeholder="Kehadiran Sakit" required>
+                    </div>
+                  </div>
+
+                  <div class="form-group row mb-4">
+                    <label for="inputEmail3" class="col-sm-2 col-form-label">Kehadiran Izin</label>
+                    <div class="col-sm-10">
+                      <input type="number" class="form-control" id="inputEmail3" value="<?= $row->kehadiran_izin ?>" name="kehadiran_izin" placeholder="Kehadiran Izin" required>
+                    </div>
+                  </div>
+
+                  <div class="form-group row mb-4">
+                    <label for="inputEmail3" class="col-sm-2 col-form-label">Kehadiran Alfa</label>
+                    <div class="col-sm-10">
+                      <input type="number" class="form-control" id="inputEmail3" value="<?= $row->kehadiran_alfa ?>" name="kehadiran_alfa" placeholder="Kehadiran Alfa" required>
+                    </div>
+                  </div>
+
+                  <div class="form-group row mb-4">
+                    <label for="inputEmail3" class="col-sm-2 col-form-label">Agama</label>
+                    <div class="col-sm-10">
+                      <input type="text" class="form-control" id="inputEmail3" value="<?= $row->agama ?>" name="agama" placeholder="Agama" required>
+                    </div>
+                  </div>
+
+                  <div class="form-group row mb-4">
+                    <label for="inputEmail3" class="col-sm-2 col-form-label">Status Dalam Keluarga</label>
+                    <div class="col-sm-10">
+                      <input type="text" class="form-control" id="inputEmail3" value="<?= $row->status_dalam_keluarga ?>" name="status_dalam_keluarga" placeholder="Status Dalam Keluarga" required>
+                    </div>
+                  </div>
+
+                  <div class="form-group row mb-4">
+                    <label for="inputEmail3" class="col-sm-2 col-form-label">Anak ke</label>
+                    <div class="col-sm-10">
+                      <input type="number" class="form-control" id="inputEmail3" value="<?= $row->anak_ke ?>" name="anak_ke" placeholder="Anak ke" required>
+                    </div>
+                  </div>
+
+                  <div class="form-group row mb-4">
+                    <label for="inputEmail3" class="col-sm-2 col-form-label">Alamat Siswa</label>
+                    <div class="col-sm-10">
+                      <input type="text" class="form-control" id="inputEmail3" value="<?= $row->alamat_siswa ?>" name="alamat_siswa" placeholder="Alamat Siswa" required>
+                    </div>
+                  </div>
+
+                  <div class="form-group row mb-4">
+                    <label for="inputEmail3" class="col-sm-2 col-form-label">Nomor Telepon Rumah</label>
+                    <div class="col-sm-10">
+                      <input type="text" class="form-control" id="inputEmail3" value="<?= $row->no_telp_rumah ?>" name="no_telp_rumah" placeholder="Nomor Telepon Rumah" required>
+                    </div>
+                  </div>
+                  
+                  <div class="form-group row mb-4">
+                    <label for="inputEmail3" class="col-sm-2 col-form-label">Sekolah Asal</label>
+                    <div class="col-sm-10">
+                      <input type="text" class="form-control" id="inputEmail3" value="<?= $row->sekolah_asal ?>" name="sekolah_asal" placeholder="Sekolah Asal" required>
+                    </div>
+                  </div>
+
+                  <div class="form-group row mb-4">
+                    <label for="inputEmail3" class="col-sm-2 col-form-label">Nama Ayah</label>
+                    <div class="col-sm-10">
+                      <input type="text" class="form-control" id="inputEmail3" value="<?= $row->nama_ayah ?>" name="nama_ayah" placeholder="Nama Ayah" required>
+                    </div>
+                  </div>
+
+                  <div class="form-group row mb-4">
+                    <label for="inputEmail3" class="col-sm-2 col-form-label">Nama Ibu</label>
+                    <div class="col-sm-10">
+                      <input type="text" class="form-control" id="inputEmail3" value="<?= $row->nama_ibu ?>" name="nama_ibu" placeholder="Nama Ibu" required>
+                    </div>
+                  </div>
+                  
+                  <div class="form-group row mb-4">
+                    <label for="inputEmail3" class="col-sm-2 col-form-label">Alamat Orang Tua</label>
+                    <div class="col-sm-10">
+                      <input type="text" class="form-control" id="inputEmail3" value="<?= $row->alamat_orangtua ?>" name="alamat_orangtua" placeholder="Alamat Orang Tua" required>
+                    </div>
+                  </div>
+
+                  <div class="form-group row mb-4">
+                    <label for="inputEmail3" class="col-sm-2 col-form-label">Nomor Telepon Orang Tua</label>
+                    <div class="col-sm-10">
+                      <input type="number" class="form-control" id="inputEmail3" value="<?= $row->no_telp_orangtua ?>" name="no_telp_orangtua" placeholder="Nomor Telepon Orang Tua" required>
+                    </div>
+                  </div>
+
+                  <div class="form-group row mb-4">
+                    <label for="inputEmail3" class="col-sm-2 col-form-label">Pekerjaan Ayah</label>
+                    <div class="col-sm-10">
+                      <input type="text" class="form-control" id="inputEmail3" value="<?= $row->pekerjaan_ayah ?>" name="pekerjaan_ayah" placeholder="Pekerjaan Ayah" required>
+                    </div>
+                  </div>
+
+                  <div class="form-group row mb-4">
+                    <label for="inputEmail3" class="col-sm-2 col-form-label">Pekerjaan Ibu</label>
+                    <div class="col-sm-10">
+                      <input type="text" class="form-control" id="inputEmail3" value="<?= $row->pekerjaan_ibu ?>" name="pekerjaan_ibu" placeholder="Pekerjaan Ibu" required>
+                    </div>
+                  </div>
+
+                  <div class="form-group row mb-4">
+                    <label for="inputEmail3" class="col-sm-2 col-form-label">Nama Wali Siswa</label>
+                    <div class="col-sm-10">
+                      <input type="text" class="form-control" id="inputEmail3" value="<?= $row->nama_wali_siswa ?>" name="nama_wali_siswa" placeholder="Nama Wali Siswa" required>
+                    </div>
+                  </div>
+
+                  <div class="form-group row mb-4">
+                    <label for="inputEmail3" class="col-sm-2 col-form-label">Alamat Wali Siswa</label>
+                    <div class="col-sm-10">
+                      <input type="text" class="form-control" id="inputEmail3" value="<?= $row->alamat_wali_siswa ?>" name="alamat_wali_siswa" placeholder="Alamat Wali Siswa" required>
+                    </div>
+                  </div>
+
+                  <div class="form-group row mb-4">
+                    <label for="inputEmail3" class="col-sm-2 col-form-label">Nomor Telepon Wali Siswa</label>
+                    <div class="col-sm-10">
+                      <input type="number" class="form-control" id="inputEmail3" value="<?= $row->no_telp_wali_siswa ?>" name="no_telp_wali_siswa" placeholder="Nomor Telepon Wali Siswa" required>
+                    </div>
+                  </div>
+
+                  <div class="form-group row mb-4">
+                    <label for="inputEmail3" class="col-sm-2 col-form-label">Pekerjaan Wali Siswa</label>
+                    <div class="col-sm-10">
+                      <input type="text" class="form-control" id="inputEmail3" value="<?= $row->pekerjaan_wali_siswa ?>" name="pekerjaan_wali_siswa" placeholder="Pekerjaan Wali Siswa" required>
                     </div>
                   </div>
 
