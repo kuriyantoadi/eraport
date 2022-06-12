@@ -27,7 +27,7 @@
 <div class="wrapper">
   <nav class="main-header navbar navbar-expand-md navbar-light navbar-white">
     <div class="container">
-      <a href="" class="navbar-brand">
+      <a href="<?= base_url() ?>C_admin/home" class="navbar-brand">
         <span class="brand-text font-weight-light">E-Raport</span>
       </a>
 

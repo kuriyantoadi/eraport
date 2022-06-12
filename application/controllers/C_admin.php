@@ -25,6 +25,13 @@ public function index()
 	$this->load->view('template/footer-admin');
 }
 
+public function home()
+{
+	$this->load->view('template/header-admin');
+	$this->load->view('admin/home');
+	$this->load->view('template/footer-admin');
+}
+
 	public function walas_tambah()
 	{
 		$data['tampil_kelas'] = $this->M_admin->kelas_tampil();

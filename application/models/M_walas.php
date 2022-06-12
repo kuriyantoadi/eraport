@@ -21,6 +21,40 @@ class M_walas extends CI_Model{
   }
 
 
+  public function semester_1($ses_id_kelas, $id_siswa)
+  {
+    $this->db->select('*');
+    $this->db->from('tb_mapel');
+    $this->db->join('tb_kelas','tb_kelas.id_kelas = tb_mapel.id_kelas');
+    $this->db->where('tb_mapel.semester',"1");
+    $query = $this->db->get()->result();
+    return $query;
+  }
+
+  // public function semester_1($ses_id_kelas, $id_siswa)
+  // {
+  //   $this->db->select('*');
+  //   $this->db->from('tb_siswa');
+  //   $this->db->join('tb_kelas','tb_kelas.id_kelas = tb_siswa.id_kelas');
+  //   $this->db->join('tb_kelas','tb_kelas.id_kelas = tb_mapel.id_kelas');
+  //   // $this->db->where('tb_kelas.id_kelas',$ses_id_kelas);
+  //   // $this->db->where('tb_mapel.semester',"1");
+  //   // $this->db->where('tb_siswa.id_siswa',$id_siswa);
+  //   $query = $this->db->get()->result();
+  //   return $query;
+  // }
+
+  // function semester_1($id_siswa, $ses_id_kelas){
+  //   $query = $this->db->query("SELECT * FROM `tb_siswa` JOIN `tb_kelas` JOIN `tb_mapel` ON
+  //     `tb_mapel`.`id_kelas` = `tb_kelas`.`id_kelas`
+  //     WHERE `tb_siswa`.`id_siswa` = '$id_siswa'
+  //     AND `tb_mapel`.`semester` = '1'
+  //     AND `tb_mapel`.`id_kelas` = '$ses_id_kelas' ");
+  //   return $query;
+  // }
+
+
+
 }
 
  ?>

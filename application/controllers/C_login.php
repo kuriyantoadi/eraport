@@ -114,7 +114,7 @@ class C_login extends CI_Controller {
         $this->session->set_userdata('admin', true);
         $this->session->set_userdata('ses_id', $data['id_admin']);
         $this->session->set_userdata('ses_user', $data['username']);
-        redirect('C_admin');
+        redirect('C_admin/home');
 
       }else {
         $url = base_url('C_login/fa');
