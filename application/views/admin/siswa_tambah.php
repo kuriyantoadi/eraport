@@ -81,7 +81,7 @@
                   <div class="form-group row mb-4">
                     <label for="inputEmail3" class="col-sm-2 col-form-label">PKL Mitra DU/DI</label>
                     <div class="col-sm-10">
-                      <input type="text" class="form-control" id="inputEmail3" name="	pkl_mitra_du_di" placeholder="PKL Mitra DU/DI" required>
+                      <input type="text" class="form-control" id="inputEmail3" name="pkl_mitra_du_di" placeholder="PKL Mitra DU/DI" required>
                     </div>
                   </div>
 
