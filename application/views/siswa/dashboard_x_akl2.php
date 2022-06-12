@@ -24,7 +24,7 @@
             </h5>
             <?php foreach ($tampil as $row) { ?>
 
-                <table border="0" style="margin-top: 20px; margin-bottom: 20px">
+                <table style="margin-top: 20px; margin-bottom: 20px">
                     <tr >
                         <td width='200px'>Nama peserta didik</td>
                         <td>: <?= $row->nama_siswa ?></td>
@@ -46,8 +46,8 @@
         <div class="">
             <h6>A. Nilai Akademik</h6>
             <!-- <table class="table table-bordered"> -->
-            <table>
-                    <tr class="border-1">
+            <table border="1">
+                    <tr>
                         <th rowspan="2">No</th>
                         <th rowspan="2">Mata Pelajaran</th>
                         <th colspan="4">Nilai Hasil Belajar</th>
@@ -66,7 +66,7 @@
                     </tr>
                     <tr>
                         <th>1</th>
-                        <td width='300px'>Pendidikan Agama dan Budi Pekerti</td>
+                        <td>Pendidikan Agama dan Budi Pekerti</td>
                         <td><?= $row->pai_p ?></td>
                         <td><?= $row->pai_k ?></td>
                         <td><?= $row->pai_na ?></td>

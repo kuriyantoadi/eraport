@@ -12,7 +12,7 @@ class C_login extends CI_Controller {
 
   public function index()
   {
-    $this->load->view('login_siswa');
+    $this->load->view('siswa/login');
   }
 
   public function login_siswa()
@@ -29,7 +29,7 @@ class C_login extends CI_Controller {
         $this->session->set_userdata('siswa', true);
         $this->session->set_userdata('ses_id', $data['id_siswa']);
         $this->session->set_userdata('ses_nisn', $data['nisn_siswa']);
-        redirect('C_siswa/dashboard_tekno');
+        redirect('C_siswa/dashboard_x_akl');
 
       }elseif ($data['status']=='otkp') {
         $this->session->set_userdata('siswa', true);
