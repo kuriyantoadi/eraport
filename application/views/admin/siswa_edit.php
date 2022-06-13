@@ -30,7 +30,7 @@
                   <div class="form-group row">
                     <label for="inputPassword3" class="col-sm-2 col-form-label">NISN</label>
                     <div class="col-sm-10">
-                      <input type="text" class="form-control" id="inputPassword3" value="<?= $row->nisn ?>" name="nisn" placeholder="NISN">
+                      <input type="text" class="form-control" id="inputPassword3" value="<?= $row->nisn_siswa ?>" name="nisn" placeholder="NISN">
                     </div>
                   </div>
                   <div class="form-group row">
@@ -101,7 +101,7 @@
                       <input type="text" class="form-control" id="inputEmail3" value="<?= $row->pkl_keterangan ?>" name="pkl_keterangan" placeholder="Keterangan PKL" required>
                     </div>
                   </div>
-                  
+
                   <div class="form-group row mb-4">
                     <label for="inputEmail3" class="col-sm-2 col-form-label">Ekstrakurikurel 1</label>
                     <div class="col-sm-10">
@@ -199,7 +199,7 @@
                       <input type="text" class="form-control" id="inputEmail3" value="<?= $row->no_telp_rumah ?>" name="no_telp_rumah" placeholder="Nomor Telepon Rumah" required>
                     </div>
                   </div>
-                  
+
                   <div class="form-group row mb-4">
                     <label for="inputEmail3" class="col-sm-2 col-form-label">Sekolah Asal</label>
                     <div class="col-sm-10">
@@ -220,7 +220,7 @@
                       <input type="text" class="form-control" id="inputEmail3" value="<?= $row->nama_ibu ?>" name="nama_ibu" placeholder="Nama Ibu" required>
                     </div>
                   </div>
-                  
+
                   <div class="form-group row mb-4">
                     <label for="inputEmail3" class="col-sm-2 col-form-label">Alamat Orang Tua</label>
                     <div class="col-sm-10">

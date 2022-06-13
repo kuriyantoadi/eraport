@@ -182,7 +182,7 @@ public function home()
 	{
 		$id_siswa = $this->input->post('id_siswa');
 		$nis = $this->input->post('nis');
-		$nisn = $this->input->post('nisn');
+		$nisn_siswa = $this->input->post('nisn_siswa');
 		$nama_siswa = $this->input->post('nama_siswa');
 		$id_kelas = $this->input->post('id_kelas');
 		$semester = $this->input->post('semester');
@@ -219,7 +219,7 @@ public function home()
 
 		$data_edit = array(
 			'nis' => $nis,
-			'nisn' => $nisn,
+			'nisn_siswa' => $nisn_siswa,
 			'nama_siswa' => $nama_siswa,
 			'id_kelas' => $id_kelas,
 			'semester' => $semester,
@@ -299,14 +299,14 @@ public function home()
 	{
 		$id_siswa = $this->input->post('id_siswa');
 		$nis = $this->input->post('nis');
-		$nisn = $this->input->post('nisn');
+		$nisn_siswa = $this->input->post('nisn_siswa');
 		$nama_siswa = $this->input->post('nama_siswa');
 		$id_kelas = $this->input->post('id_kelas');
 		$semester = $this->input->post('semester');
 
 		$data_edit = array(
 			'nis' => $nis,
-			'nisn' => $nisn,
+			'nisn_siswa' => $nisn_siswa,
 			'nama_siswa' => $nama_siswa,
 			'id_kelas' => $id_kelas,
 			'semester' => $semester,
@@ -338,7 +338,7 @@ public function home()
 	public function siswa_tambah_up()
 	{
 		$nis = $this->input->post('nis');
-		$nisn = $this->input->post('nisn');
+		$nisn_siswa = $this->input->post('nisn_siswa');
 		$password = $this->input->post('password');
 		$nama_siswa = $this->input->post('nama_siswa');
 		$id_kelas = $this->input->post('id_kelas');
@@ -376,7 +376,7 @@ public function home()
 
 		$data_tambah = array(
 			'nis' => $nis,
-			'nisn' => $nisn,
+			'nisn_siswa' => $nisn_siswa,
 			'nama_siswa' => $nama_siswa,
 			'semester' => $semester,
 			'password' => sha1($password),

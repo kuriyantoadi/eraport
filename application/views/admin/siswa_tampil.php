@@ -32,7 +32,7 @@
                 <tbody>
                     <tr>
                         <td><?= $no++ ?></td>
-                        <td><?= $row->nisn ?>
+                        <td><?= $row->nisn_siswa ?>
                         <td><?= $row->nama_siswa ?>
                         <td><?= $row->nama_kelas ?></td>
                         <td><center>
