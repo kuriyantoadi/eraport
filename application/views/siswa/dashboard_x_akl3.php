@@ -56,6 +56,7 @@
         .tdd{
             margin-top: 100px;
             margin-bottom: 50px;
+            text-align: center;
         }
 
         .border-bottom{
@@ -135,58 +136,58 @@
                             <tr>
                                 <th>1</th>
                                 <td width='300px'>Pendidikan Agama dan Budi Pekerti</td>
-                                <td align='center'><?= $row->pai_p ?></td>
-                                <td align='center'><?= $row->pai_k ?></td>
-                                <td align='center'><?= $row->pai_na ?></td>
-                                <td align='center'><?= $row->pai_pr ?></td>
+                                <td><?= $row->pai_p ?></td>
+                                <td><?= $row->pai_k ?></td>
+                                <td><?= $row->pai_na ?></td>
+                                <td><?= $row->pai_pr ?></td>
                             </tr>
                             <tr>
                                 <th>2</th>
                                 <td>Pendidikan Kewarganegraan</td>
-                                <td align='center'><?= $row->pkn_p ?></td>
-                                <td align='center'><?= $row->pkn_k ?></td>
-                                <td align='center'><?= $row->pkn_na ?></td>
-                                <td align='center'><?= $row->pkn_pr ?></td>
+                                <td><?= $row->pkn_p ?></td>
+                                <td><?= $row->pkn_k ?></td>
+                                <td><?= $row->pkn_na ?></td>
+                                <td><?= $row->pkn_pr ?></td>
                             </tr>
                             <tr>
                                 <th>3</th>
                                 <td>Bahasa Indonesia</td>
-                                <td align='center'><?= $row->pkn_p ?></td>
-                                <td align='center'><?= $row->pai_k ?></td>
-                                <td align='center'><?= $row->pai_na ?></td>
-                                <td align='center'><?= $row->pai_pr ?></td>
+                                <td><?= $row->pkn_p ?></td>
+                                <td><?= $row->pai_k ?></td>
+                                <td><?= $row->pai_na ?></td>
+                                <td><?= $row->pai_pr ?></td>
                             </tr>
                             <tr>
                                 <th>3</th>
                                 <td>Bahasa Indonesia</td>
-                                <td align='center'><?= $row->pkn_p ?></td>
-                                <td align='center'><?= $row->pai_k ?></td>
-                                <td align='center'><?= $row->pai_na ?></td>
-                                <td align='center'><?= $row->pai_pr ?></td>
+                                <td><?= $row->pkn_p ?></td>
+                                <td><?= $row->pai_k ?></td>
+                                <td><?= $row->pai_na ?></td>
+                                <td><?= $row->pai_pr ?></td>
                             </tr>
                             <tr>
                                 <th>4</th>
                                 <td>Matematika</td>
-                                <td align='center'><?= $row->mtk_p ?></td>
-                                <td align='center'><?= $row->mtk_k ?></td>
-                                <td align='center'><?= $row->mtk_na ?></td>
-                                <td align='center'><?= $row->mtk_pr ?></td>
+                                <td><?= $row->mtk_p ?></td>
+                                <td><?= $row->mtk_k ?></td>
+                                <td><?= $row->mtk_na ?></td>
+                                <td><?= $row->mtk_pr ?></td>
                             </tr>
                             <tr>
                                 <th>5</th>
                                 <td>Sejarah Indonesia</td>
-                                <td align='center'><?= $row->sejindo_p ?></td>
-                                <td align='center'><?= $row->sejindo_k ?></td>
-                                <td align='center'><?= $row->sejindo_na ?></td>
-                                <td align='center'><?= $row->sejindo_pr ?></td>
+                                <td><?= $row->sejindo_p ?></td>
+                                <td><?= $row->sejindo_k ?></td>
+                                <td><?= $row->sejindo_na ?></td>
+                                <td><?= $row->sejindo_pr ?></td>
                             </tr>
                             <tr>
                                 <th>6</th>
                                 <td>Bahasa Inggris dan Bahasa Asing lainnya</td>
-                                <td align='center'><?= $row->b_inggris_p ?></td>
-                                <td align='center'><?= $row->b_inggris_k ?></td>
-                                <td align='center'><?= $row->b_inggris_na ?></td>
-                                <td align='center'><?= $row->b_inggris_pr ?></td>
+                                <td><?= $row->b_inggris_p ?></td>
+                                <td><?= $row->b_inggris_k ?></td>
+                                <td><?= $row->b_inggris_na ?></td>
+                                <td><?= $row->b_inggris_pr ?></td>
                             </tr>
                             <tr>
                                 <td colspan="6">
@@ -196,18 +197,18 @@
                             <tr>
                                 <th>1</th>
                                 <td>Seni Budaya</td>
-                                <td align='center'><?= $row->seni_budaya_p ?></td>
-                                <td align='center'><?= $row->seni_budaya_k ?></td>
-                                <td align='center'><?= $row->seni_budaya_na ?></td>
-                                <td align='center'><?= $row->seni_budaya_pr ?></td>
+                                <td><?= $row->seni_budaya_p ?></td>
+                                <td><?= $row->seni_budaya_k ?></td>
+                                <td><?= $row->seni_budaya_na ?></td>
+                                <td><?= $row->seni_budaya_pr ?></td>
                             </tr>
                             <tr>
                                 <th>2</th>
                                 <td>Pendidikan Jasmani, Olahraga dan Kesehatan</td>
-                                <td align='center'><?= $row->pjok_p ?></td>
-                                <td align='center'><?= $row->pjok_k ?></td>
-                                <td align='center'><?= $row->pjok_na ?></td>
-                                <td align='center'><?= $row->pjok_pr ?></td>
+                                <td><?= $row->pjok_p ?></td>
+                                <td><?= $row->pjok_k ?></td>
+                                <td><?= $row->pjok_na ?></td>
+                                <td><?= $row->pjok_pr ?></td>
                             </tr>
 
                             <tr>
@@ -223,34 +224,34 @@
                             <tr>
                                 <th>1</th>
                                 <td>Simulasi dan Komunikasi Digital</td>
-                                <td align='center'><?= $row->siskomdig_p ?></td>
-                                <td align='center'><?= $row->siskomdig_k ?></td>
-                                <td align='center'><?= $row->siskomdig_na ?></td>
-                                <td align='center'><?= $row->siskomdig_pr ?></td>
+                                <td><?= $row->siskomdig_p ?></td>
+                                <td><?= $row->siskomdig_k ?></td>
+                                <td><?= $row->siskomdig_na ?></td>
+                                <td><?= $row->siskomdig_pr ?></td>
                             </tr>
                             <tr>
                                 <th>2</th>
                                 <td>Ekonomi Bisnis</td>
-                                <td align='center'><?= $row->ekobis_p ?></td>
-                                <td align='center'><?= $row->ekobis_k ?></td>
-                                <td align='center'><?= $row->ekobis_na ?></td>
-                                <td align='center'><?= $row->ekobis_pr ?></td>
+                                <td><?= $row->ekobis_p ?></td>
+                                <td><?= $row->ekobis_k ?></td>
+                                <td><?= $row->ekobis_na ?></td>
+                                <td><?= $row->ekobis_pr ?></td>
                             </tr>
                             <tr>
                                 <th>3</th>
                                 <td>Administrasi Umum</td>
-                                <td align='center'><?= $row->adm_umum_p ?></td>
-                                <td align='center'><?= $row->adm_umum_k ?></td>
-                                <td align='center'><?= $row->adm_umum_na ?></td>
-                                <td align='center'><?= $row->adm_umum_pr ?></td>
+                                <td><?= $row->adm_umum_p ?></td>
+                                <td><?= $row->adm_umum_k ?></td>
+                                <td><?= $row->adm_umum_na ?></td>
+                                <td><?= $row->adm_umum_pr ?></td>
                             </tr>
                             <tr>
                                 <th>4</th>
                                 <td>IPA</td>
-                                <td align='center'><?= $row->ipa_p ?></td>
-                                <td align='center'><?= $row->ipa_k ?></td>
-                                <td align='center'><?= $row->ipa_na ?></td>
-                                <td align='center'><?= $row->ipa_pr ?></td>
+                                <td><?= $row->ipa_p ?></td>
+                                <td><?= $row->ipa_k ?></td>
+                                <td><?= $row->ipa_na ?></td>
+                                <td><?= $row->ipa_pr ?></td>
                             </tr>
                             <tr>
                                 <td colspan="6">
@@ -259,35 +260,35 @@
                             </tr>
                             <tr>
                                 <th>1</th>
-                                <td align='center'>Etika Profesi</td>
-                                <td align='center'><?= $row->etika_profesi_p ?></td>
-                                <td align='center'><?= $row->etika_profesi_k ?></td>
-                                <td align='center'><?= $row->etika_profesi_na ?></td>
-                                <td align='center'><?= $row->etika_profesi_pr ?></td>
+                                <td>Etika Profesi</td>
+                                <td><?= $row->etika_profesi_p ?></td>
+                                <td><?= $row->etika_profesi_k ?></td>
+                                <td><?= $row->etika_profesi_na ?></td>
+                                <td><?= $row->etika_profesi_pr ?></td>
                             </tr>
                             <tr>
                                 <th>2</th>
                                 <td>Aplikasi Pengolah Angka / Spreadsheet</td>
-                                <td align='center'><?= $row->spreadsheet_p ?></td>
-                                <td align='center'><?= $row->spreadsheet_k ?></td>
-                                <td align='center'><?= $row->spreadsheet_na ?></td>
-                                <td align='center'><?= $row->spreadsheet_pr ?></td>
+                                <td><?= $row->spreadsheet_p ?></td>
+                                <td><?= $row->spreadsheet_k ?></td>
+                                <td><?= $row->spreadsheet_na ?></td>
+                                <td><?= $row->spreadsheet_pr ?></td>
                             </tr>
                             <tr>
                                 <th>3</th>
                                 <td>Akuntansi Dasar</td>
-                                <td align='center'><?= $row->akuntansi_dasar_p ?></td>
-                                <td align='center'><?= $row->akuntansi_dasar_k ?></td>
-                                <td align='center'><?= $row->akuntansi_dasar_na ?></td>
-                                <td align='center'><?= $row->akuntansi_dasar_pr ?></td>
+                                <td><?= $row->akuntansi_dasar_p ?></td>
+                                <td><?= $row->akuntansi_dasar_k ?></td>
+                                <td><?= $row->akuntansi_dasar_na ?></td>
+                                <td><?= $row->akuntansi_dasar_pr ?></td>
                             </tr>
                             <tr>
                                 <th>4</th>
                                 <td>Perbankan Dasar</td>
-                                <td align='center'><?= $row->perbankan_dasar_p ?></td>
-                                <td align='center'><?= $row->perbankan_dasar_k ?></td>
-                                <td align='center'><?= $row->perbankan_dasar_na ?></td>
-                                <td align='center'><?= $row->perbankan_dasar_pr ?></td>
+                                <td><?= $row->perbankan_dasar_p ?></td>
+                                <td><?= $row->perbankan_dasar_k ?></td>
+                                <td><?= $row->perbankan_dasar_na ?></td>
+                                <td><?= $row->perbankan_dasar_pr ?></td>
                             </tr>
                             <tr>
                                 <td colspan="6">
@@ -297,60 +298,60 @@
                             <tr>
                                 <th>1</th>
                                 <td>Praktikum Akuntansi Perusahaan Jasa, Dagang dan Manufaktur</td>
-                                <td align='center'><?= $row->papjd_manufaktur_p ?></td>
-                                <td align='center'><?= $row->papjd_manufaktur_k ?></td>
-                                <td align='center'><?= $row->papjd_manufaktur_na ?></td>
-                                <td align='center'><?= $row->papjd_manufaktur_pr ?></td>
+                                <td><?= $row->papjd_manufaktur_p ?></td>
+                                <td><?= $row->papjd_manufaktur_k ?></td>
+                                <td><?= $row->papjd_manufaktur_na ?></td>
+                                <td><?= $row->papjd_manufaktur_pr ?></td>
                             </tr>
                             <tr>
                                 <th>2</th>
                                 <td>Praktikum Akuntansi Lembaga/Instansi Pemerintah</td>
-                                <td align='center'><?= $row->akuntansi_lembaga_p ?></td>
-                                <td align='center'><?= $row->akuntansi_lembaga_k ?></td>
-                                <td align='center'><?= $row->akuntansi_lembaga_na ?></td>
-                                <td align='center'><?= $row->akuntansi_lembaga_pr ?></td>
+                                <td><?= $row->akuntansi_lembaga_p ?></td>
+                                <td><?= $row->akuntansi_lembaga_k ?></td>
+                                <td><?= $row->akuntansi_lembaga_na ?></td>
+                                <td><?= $row->akuntansi_lembaga_pr ?></td>
                             </tr>
                             <tr>
                                 <th>3</th>
                                 <td>Akuntansi Keuangan</td>
-                                <td align='center'><?= $row->papjd_manufaktur_p ?></td>
-                                <td align='center'><?= $row->papjd_manufaktur_k ?></td>
-                                <td align='center'><?= $row->papjd_manufaktur_na ?></td>
-                                <td align='center'><?= $row->papjd_manufaktur_pr ?></td>
+                                <td><?= $row->papjd_manufaktur_p ?></td>
+                                <td><?= $row->papjd_manufaktur_k ?></td>
+                                <td><?= $row->papjd_manufaktur_na ?></td>
+                                <td><?= $row->papjd_manufaktur_pr ?></td>
                             </tr>
                             <tr>
                                 <th>4</th>
                                 <td>Komputer Akuntansi</td>
-                                <td align='center'><?= $row->kom_akuntansi_p ?></td>
-                                <td align='center'><?= $row->kom_akuntansi_k ?></td>
-                                <td align='center'><?= $row->kom_akuntansi_na ?></td>
-                                <td align='center'><?= $row->kom_akuntansi_pr ?></td>
+                                <td><?= $row->kom_akuntansi_p ?></td>
+                                <td><?= $row->kom_akuntansi_k ?></td>
+                                <td><?= $row->kom_akuntansi_na ?></td>
+                                <td><?= $row->kom_akuntansi_pr ?></td>
                             </tr>
                             <tr>
                                 <th>5</th>
                                 <td>Administrasi Pajak</td>
-                                <td align='center'><?= $row->adm_pajak_p ?></td>
-                                <td align='center'><?= $row->adm_pajak_k ?></td>
-                                <td align='center'><?= $row->adm_pajak_na ?></td>
-                                <td align='center'><?= $row->adm_pajak_pr ?></td>
+                                <td><?= $row->adm_pajak_p ?></td>
+                                <td><?= $row->adm_pajak_k ?></td>
+                                <td><?= $row->adm_pajak_na ?></td>
+                                <td><?= $row->adm_pajak_pr ?></td>
                             </tr>
                             <tr>
                                 <th>6</th>
                                 <td>Produk Kreatif dan Kewirausahaan</td>
-                                <td align='center'><?= $row->pkk_p ?></td>
-                                <td align='center'><?= $row->pkk_k ?></td>
-                                <td align='center'><?= $row->pkk_na ?></td>
-                                <td align='center'><?= $row->pkk_pr ?></td>
+                                <td><?= $row->pkk_p ?></td>
+                                <td><?= $row->pkk_k ?></td>
+                                <td><?= $row->pkk_na ?></td>
+                                <td><?= $row->pkk_pr ?></td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
 
-                <div style="margin-top: 300px">
+                <div style="padding: 50px">
 
                 </div>
 
-                <h4>B. Catatan Akademik</h4>
+                <h4 style="margin-top: 500px">B. Catatan Akademik</h4>
                 <div class="catatan" style="margin-bottom: 20px;">
                     <span>Catatan</span>
                 </div>
@@ -371,10 +372,10 @@
                         </tr>
                         <tr>
                             <th>1</th>
-                            <td align='center'><?= $row->pkl_mitra_du_di ?></td>
-                            <td align='center'><?= $row->pkl_lokasi ?></td>
-                            <td align='center'><?= $row->pkl_lamanya ?> Bulan</td>
-                            <td align='center'><?= $row->pkl_keterangan ?></td>
+                            <td><?= $row->pkl_mitra_du_di ?></td>
+                            <td><?= $row->pkl_lokasi ?></td>
+                            <td><?= $row->pkl_lamanya ?> Bulan</td>
+                            <td><?= $row->pkl_keterangan ?></td>
                         </tr>
                     </table>
                 </div>
@@ -447,55 +448,7 @@
                 </div>
 
 
-                <div style="margin: 50px">
-                  <table border="0">
-                    <tr>
-                      <td>
-                        Mengetahui,
-                        <br>Orang Tua/Wali,
-                      </td>
-                      <td >
-                        <div style="margin-left: 300px">
-                        </div>
-                      </td>
-                      <td>Wali Kelas</td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <div style="margin-top: 80px">
-                        </div>
-                          ..........................
-                      </td>
-                      <td></td>
-                      <td>
-                        <div style="margin-top: 80px">
-                        </div><b>
-                        <?= $row->nama_guru ?>
-                        <br>NIP. <?= $row->nip ?></b>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td></td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <div style="margin-left: 150px; margin-top: 30px">
-                        </div>
-                      </td>
-                      <td align='center'>
-                        Mengetahui,
-                        <br>Kepala Sekolah
-                        <br><br><br><br><br>
-                        <br><b>Drs. Falati, M.Si
-                        <br>Pembina TK.I
-                        <br>NIP. 19640311 198903 1 011</b>
-                      </td>
-                    </tr>
-                  </table>
-                </div>
-
-
-                <!-- <div class="tdd">
+                <div class="tdd">
                     <div class="row justify-content-around">
                         <div class="col-3">
                             Mengetahui,<br>
@@ -518,29 +471,7 @@
                         Pembina TK.I <br>
                         NIP.19640311 198903 1 011
                     </div>
-                </div> -->
-
-                <div style="margin-top: 450px">
                 </div>
-
-                <table class="tm">
-                    <tr>
-                        <td width='200px'>Nama peserta didik</td>
-                        <td>: <?= $row->nama_siswa ?></td>
-                    </tr>
-                    <tr>
-                        <td>NISN / NIS</td>
-                        <td>: <?= $row->nisn_siswa ?> / <?= $row->nis ?></td>
-                    </tr>
-                    <tr>
-                        <td>Kelas/Semester</td>
-                        <td>: <?= $row->nama_kelas ?></td>
-                    </tr>
-                    <tr>
-                        <td>Semester</td>
-                        <td>: 2 (dua)</td>
-                    </tr>
-                </table>
 
                 <h4>G. Deskripsi Pengembangan Karakter</h4>
                 <div class="bordered" style="margin-bottom: 20px;">
@@ -584,7 +515,5 @@
             </div>
             <?php } ?>
             <!-- <script src="<?= base_url() ?>assets/js/bootstrap.bundle.min.js"></script> -->
-            <script>window.print(); </script>
-
         </body>
         </html>
