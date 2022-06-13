@@ -29,37 +29,37 @@ class C_login extends CI_Controller {
         $this->session->set_userdata('siswa', true);
         $this->session->set_userdata('ses_id', $data['id_siswa']);
         $this->session->set_userdata('ses_nisn', $data['nisn_siswa']);
-        redirect('C_siswa/dashboard_x_akl');
+        redirect('C_siswa/dashboard');
 
       }elseif ($data['status']=='otkp') {
         $this->session->set_userdata('siswa', true);
         $this->session->set_userdata('ses_id', $data['id_siswa']);
         $this->session->set_userdata('ses_username', $data['nisn_siswa']);
-        redirect('C_pimpinan/dashboard');
+        redirect('C_siswa/dashboard');
 
       }elseif ($data['status']=='tkj') {
         $this->session->set_userdata('siswa', true);
         $this->session->set_userdata('ses_id', $data['id_siswa']);
         $this->session->set_userdata('ses_username', $data['nisn_siswa']);
-        redirect('C_pimpinan/dashboard');
+        redirect('C_siswa/dashboard');
 
       }elseif ($data['status']=='rpl') {
         $this->session->set_userdata('siswa', true);
         $this->session->set_userdata('ses_id', $data['id_siswa']);
         $this->session->set_userdata('ses_username', $data['nisn_siswa']);
-        redirect('C_pimpinan/dashboard');
+        redirect('C_siswa/dashboard');
 
       }elseif ($data['status']=='tkr') {
         $this->session->set_userdata('siswa', true);
         $this->session->set_userdata('ses_id', $data['id_siswa']);
         $this->session->set_userdata('ses_username', $data['nisn_siswa']);
-        redirect('C_pimpinan/dashboard');
+        redirect('C_siswa/dashboard');
 
       }elseif ($data['status']=='tpm') {
         $this->session->set_userdata('siswa', true);
         $this->session->set_userdata('ses_id', $data['id_siswa']);
         $this->session->set_userdata('ses_username', $data['nisn_siswa']);
-        redirect('C_pimpinan/dashboard');
+        redirect('C_siswa/dashboard');
 
       }else {
         $url = base_url('C_login');

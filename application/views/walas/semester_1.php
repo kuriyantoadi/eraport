@@ -31,10 +31,11 @@
                 <tr>
                   <td width='300px'><?= $row->nama_mapel ?></td>
                   <td>
-                    <input type="text" class="form-control" id="inputPassword3" value="" name="<?= $row->nama_mapel ?>" placeholder="">
+                    <input type="text" name="id_mapel" class="form-control" id="inputPassword3" value=""  placeholder="">
                   </td>
                 </tr>
               <?php } ?>
+
               <?= form_close(); ?>
 
 

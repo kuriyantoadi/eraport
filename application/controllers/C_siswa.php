@@ -23,141 +23,67 @@ class C_siswa extends CI_Controller {
 
 // dashboard nilai kelas X
 
-  public function dashboard_x_akl()
+	public function dashboard()
 	{
 		$ses_id = $this->session->userdata('ses_id');
-		$data['tampil'] = $this->M_siswa->dashboard_x_akl($ses_id);
+		$data['tampil'] = $this->M_siswa->dashboard($ses_id);
 
-    $this->load->view('siswa/dashboard_x_akl',$data);
-  }
+		$this->load->view('template/header-siswa');
+		$this->load->view('siswa/dashboard',$data);
+		$this->load->view('template/footer-siswa');
 
-	public function cetak_xi_akl()
-	{
-		$ses_id = $this->session->userdata('ses_id');
-		$data['tampil'] = $this->M_siswa->dashboard_x_akl($ses_id);
-
-		$this->load->view('siswa/cetak_x_akl',$data);
 	}
 
-  public function dashboard_x_otkp()
+	public function profil()
 	{
-    $this->load->view('C_admin/f');
-  }
+		$ses_id = $this->session->userdata('ses_id');
+		$data['tampil'] = $this->M_siswa->dashboard($ses_id);
 
-  public function dashboard_x_tkj()
-  {
-    $this->load->view('C_admin/f');
-  }
+		$this->load->view('template/header-siswa');
+		$this->load->view('siswa/profil',$data);
+		$this->load->view('template/footer-siswa');
 
-  public function dashboard_x_rpl()
+	}
+
+  public function print_x_akl()
 	{
-    $this->load->view('C_admin/f');
+		$ses_id = $this->session->userdata('ses_id');
+		$data['tampil'] = $this->M_siswa->print_x_akl($ses_id);
+
+    $this->load->view('siswa/print_x_akl',$data);
   }
 
-  public function dashboard_x_tkr()
+	public function password()
 	{
-    $this->load->view('C_admin/f');
-  }
+		$id_siswa = $this->session->userdata('ses_id');
+		$data['tampil'] = $this->M_siswa->siswa_edit($id_siswa);
 
-  public function dashboard_x_tpm()
-  {
-    $this->load->view('C_admin/f');
-  }
+		$this->load->view('template/header-siswa');
+		$this->load->view('siswa/password', $data);
+		$this->load->view('template/footer-siswa');
+	}
 
-  // dashboard nilai kelas XI
-
-    public function dashboard_xi_akl()
-  	{
-      $this->load->view('C_admin/f');
-    }
-
-    public function dashboard_xi_otkp()
-  	{
-      $this->load->view('C_admin/f');
-    }
-
-    public function dashboard_xi_tkj()
-    {
-      $this->load->view('C_admin/f');
-    }
-
-    public function dashboard_xi_rpl()
-  	{
-      $this->load->view('C_admin/f');
-    }
-
-    public function dashboard_xi_tkr()
-  	{
-      $this->load->view('C_admin/f');
-    }
-
-    public function dashboard_xi_tpm()
-    {
-      $this->load->view('C_admin/f');
-    }
-
-  // cetak raport kelas X
-
-  public function cetak_x_akl()
+	public function siswa_pass_up()
 	{
-    $this->load->view('C_admin/f');
-  }
+		$id_siswa = $this->input->post('id_siswa');
+		$password = $this->input->post('password');
 
-  public function cetak_x_otkp()
-	{
-    $this->load->view('C_admin/f');
-  }
+		$data_edit = array(
+			'password' => sha1($password),
+		);
 
-  public function cetak_x_tkj()
-  {
-    $this->load->view('C_admin/f');
-  }
+		$this->M_siswa->siswa_edit_up($data_edit, $id_siswa);
 
-  public function cetak_x_rpl()
-	{
-    $this->load->view('C_admin/f');
-  }
+		$this->session->set_flashdata('msg', '
+						<div class="alert alert-warning alert-dismissible fade show" role="alert">
+							<strong>Edit data berhasil</strong>
 
-  public function cetak_x_tkr()
-	{
-    $this->load->view('C_admin/f');
-  }
-
-  public function cetak_x_tpm()
-  {
-    $this->load->view('C_admin/f');
-  }
-
-  // cetak raport kelas XI
-
-
-
-
-    public function cetak_xi_otkp()
-  	{
-      $this->load->view('C_admin/f');
-    }
-
-    public function cetak_xi_tkj()
-    {
-      $this->load->view('C_admin/f');
-    }
-
-    public function cetak_xi_rpl()
-  	{
-      $this->load->view('C_admin/f');
-    }
-
-    public function cetak_xi_tkr()
-  	{
-      $this->load->view('C_admin/f');
-    }
-
-    public function cetak_xi_tpm()
-    {
-      $this->load->view('C_admin/f');
-    }
-
-  //
+							<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+								<span aria-hidden="true">&times;</span>
+							</button>
+						</div>'
+					);
+		redirect ('C_siswa/password');
+	}
 
 }
