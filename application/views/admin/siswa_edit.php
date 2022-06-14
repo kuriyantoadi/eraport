@@ -57,10 +57,10 @@
                     <div class="col-sm-10">
                       <select name="id_kelas" class="form-control " style="width: 100%;" required>
                         <?php
-                          foreach ($tampil_kelas as $row) {
+                          foreach ($tampil_kelas as $row_kls) {
                         ?>
-                        <option value="<?=  $row->id_kelas ?>">Pilihan Awal | <?= $row->nama_kelas ?></option>
-                        <option value="<?= $row->id_kelas ?>"><?= $row->nama_kelas ?></option>
+                        <option value="<?=  $row_kls->id_kelas ?>">Pilihan Awal | <?= $row_kls->nama_kelas ?></option>
+                        <option value="<?= $row_kls->id_kelas ?>"><?= $row_kls->nama_kelas ?></option>
 
                         <?php } ?>
                       </select>
