@@ -251,35 +251,27 @@
                             </tr>
                             <tr>
                                 <th>1</th>
-                                <td align='center'>Etika Profesi</td>
-                                <td align='center'><?= $row->etika_profesi_p ?></td>
-                                <td align='center'><?= $row->etika_profesi_k ?></td>
-                                <td align='center'><?= $row->etika_profesi_na ?></td>
-                                <td align='center'><?= $row->etika_profesi_pr ?></td>
+                                <td align='center'>Teknologi Perkantoran</td>
+                                <td align='center'><?= $row->teknologi_perkantoran_p ?></td>
+                                <td align='center'><?= $row->teknologi_perkantoran_k ?></td>
+                                <td align='center'><?= $row->teknologi_perkantoran_na ?></td>
+                                <td align='center'><?= $row->teknologi_perkantoran_pr ?></td>
                             </tr>
                             <tr>
                                 <th>2</th>
-                                <td>Aplikasi Pengolah Angka / Spreadsheet</td>
-                                <td align='center'><?= $row->spreadsheet_p ?></td>
-                                <td align='center'><?= $row->spreadsheet_k ?></td>
-                                <td align='center'><?= $row->spreadsheet_na ?></td>
-                                <td align='center'><?= $row->spreadsheet_pr ?></td>
+                                <td>Korespondensi</td>
+                                <td align='center'><?= $row->korespondensi_p ?></td>
+                                <td align='center'><?= $row->korespondensi_k ?></td>
+                                <td align='center'><?= $row->korespondensi_na ?></td>
+                                <td align='center'><?= $row->korespondensi_pr ?></td>
                             </tr>
                             <tr>
                                 <th>3</th>
-                                <td>Akuntansi Dasar</td>
-                                <td align='center'><?= $row->akuntansi_dasar_p ?></td>
-                                <td align='center'><?= $row->akuntansi_dasar_k ?></td>
-                                <td align='center'><?= $row->akuntansi_dasar_na ?></td>
-                                <td align='center'><?= $row->akuntansi_dasar_pr ?></td>
-                            </tr>
-                            <tr>
-                                <th>4</th>
-                                <td>Perbankan Dasar</td>
-                                <td align='center'><?= $row->perbankan_dasar_p ?></td>
-                                <td align='center'><?= $row->perbankan_dasar_k ?></td>
-                                <td align='center'><?= $row->perbankan_dasar_na ?></td>
-                                <td align='center'><?= $row->perbankan_dasar_pr ?></td>
+                                <td>Kearsipan</td>
+                                <td align='center'><?= $row->kearsipan_p ?></td>
+                                <td align='center'><?= $row->kearsipan_k ?></td>
+                                <td align='center'><?= $row->kearsipan_na ?></td>
+                                <td align='center'><?= $row->kearsipan_pr ?></td>
                             </tr>
                             <tr>
                                 <td colspan="6">
@@ -288,46 +280,38 @@
                             </tr>
                             <tr>
                                 <th>1</th>
-                                <td>Praktikum Akuntansi Perusahaan Jasa, Dagang dan Manufaktur</td>
-                                <td align='center'><?= $row->papjd_manufaktur_p ?></td>
-                                <td align='center'><?= $row->papjd_manufaktur_k ?></td>
-                                <td align='center'><?= $row->papjd_manufaktur_na ?></td>
-                                <td align='center'><?= $row->papjd_manufaktur_pr ?></td>
+                                <td>Kepegawaian</td>
+                                <td align='center'><?= $row->kepegawaian_p ?></td>
+                                <td align='center'><?= $row->kepegawaian_k ?></td>
+                                <td align='center'><?= $row->kepegawaian_na ?></td>
+                                <td align='center'><?= $row->kepegawaian_pr ?></td>
                             </tr>
                             <tr>
                                 <th>2</th>
-                                <td>Praktikum Akuntansi Lembaga/Instansi Pemerintah</td>
-                                <td align='center'><?= $row->akuntansi_lembaga_p ?></td>
-                                <td align='center'><?= $row->akuntansi_lembaga_k ?></td>
-                                <td align='center'><?= $row->akuntansi_lembaga_na ?></td>
-                                <td align='center'><?= $row->akuntansi_lembaga_pr ?></td>
+                                <td>Keuangan</td>
+                                <td align='center'><?= $row->keuangan_p ?></td>
+                                <td align='center'><?= $row->keuangan_k ?></td>
+                                <td align='center'><?= $row->keuangan_na ?></td>
+                                <td align='center'><?= $row->keuangan_pr ?></td>
                             </tr>
                             <tr>
                                 <th>3</th>
-                                <td>Akuntansi Keuangan</td>
-                                <td align='center'><?= $row->akuntansi_keuangan_p ?></td>
-                                <td align='center'><?= $row->akuntansi_keuangan_k ?></td>
-                                <td align='center'><?= $row->akuntansi_keuangan_na ?></td>
-                                <td align='center'><?= $row->akuntansi_keuangan_pr ?></td>
+                                <td>Sarana Prasarana</td>
+                                <td align='center'><?= $row->sarpras_p ?></td>
+                                <td align='center'><?= $row->sarpras_k ?></td>
+                                <td align='center'><?= $row->sarpras_na ?></td>
+                                <td align='center'><?= $row->sarpras_pr ?></td>
                             </tr>
                             <tr>
                                 <th>4</th>
-                                <td>Komputer Akuntansi</td>
-                                <td align='center'><?= $row->kom_akuntansi_p ?></td>
-                                <td align='center'><?= $row->kom_akuntansi_k ?></td>
-                                <td align='center'><?= $row->kom_akuntansi_na ?></td>
-                                <td align='center'><?= $row->kom_akuntansi_pr ?></td>
+                                <td>Humas dan Keprotokolan</td>
+                                <td align='center'><?= $row->humprot_p ?></td>
+                                <td align='center'><?= $row->humprot_k ?></td>
+                                <td align='center'><?= $row->humprot_na ?></td>
+                                <td align='center'><?= $row->humprot_pr ?></td>
                             </tr>
                             <tr>
                                 <th>5</th>
-                                <td>Administrasi Pajak</td>
-                                <td align='center'><?= $row->adm_pajak_p ?></td>
-                                <td align='center'><?= $row->adm_pajak_k ?></td>
-                                <td align='center'><?= $row->adm_pajak_na ?></td>
-                                <td align='center'><?= $row->adm_pajak_pr ?></td>
-                            </tr>
-                            <tr>
-                                <th>6</th>
                                 <td>Produk Kreatif dan Kewirausahaan</td>
                                 <td align='center'><?= $row->pkk_p ?></td>
                                 <td align='center'><?= $row->pkk_k ?></td>
@@ -422,7 +406,7 @@
 
                 <h4>F. Kenaikan Kelas</h4>
                 <div class="catatan-2" style="margin-bottom: 20px;">
-                    <span>Ananda <?= $row->nama_siswa ?>ke kelas XI AKUNTANSI 1</span>
+                    <span>Ananda <?= $row->nama_siswa ?>ke kelas XI OTKP 1</span>
                 </div>
 
                 <div class="f-right">
