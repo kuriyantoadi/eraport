@@ -28,7 +28,7 @@
                   <div class="form-group row">
                     <label for="inputPassword3" class="col-sm-2 col-form-label">NISN</label>
                     <div class="col-sm-10">
-                      <input type="text" class="form-control" id="inputPassword3" value="<?= $row->nisn ?>" name="nisn" placeholder="nisn" disabled>
+                      <input type="text" class="form-control" id="inputPassword3" value="<?= $row->nisn_siswa ?>" name="nisn_siswa" placeholder="nisn" disabled>
                     </div>
                   </div>
                   <div class="form-group row">
