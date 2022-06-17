@@ -21,7 +21,7 @@ class M_siswa extends CI_Model{
     $this->db->from('tb_siswa');
     $this->db->join('tb_nilai_x_akl','tb_nilai_x_akl.nisn_siswa = tb_siswa.nisn_siswa');
     $this->db->join('tb_kelas','tb_siswa.id_kelas = tb_kelas.id_kelas');
-    // $this->db->join('tb_admin','tb_kelas.id_kelas = tb_admin.id_kelas');
+    $this->db->join('tb_admin','tb_kelas.id_kelas = tb_admin.id_kelas');
     $this->db->where('tb_siswa.id_siswa',$id_siswa);
     $query = $this->db->get()->result();
     return $query;
