@@ -38,11 +38,11 @@
                     <label for="inputPassword3" class="col-sm-2 col-form-label">Kelas</label>
                     <div class="col-sm-10">
                       <select name="id_kelas" class="form-control " style="width: 100%;" required>
-                        <?php
-                         foreach ($tampil_kelas as $row) {
-                        ?>
                         <option value="<?=  $row->id_kelas ?>">Pilihan Awal | <?= $row->nama_kelas ?></option>
-                        <option value="<?= $row->id_kelas ?>"><?= $row->nama_kelas ?></option>
+                        <?php
+                         foreach ($tampil_kelas as $row1) {
+                        ?>
+                        <option value="<?= $row1->id_kelas ?>"><?= $row1->nama_kelas ?></option>
 
                         <?php } ?>
                       </select>

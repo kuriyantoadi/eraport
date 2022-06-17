@@ -34,7 +34,7 @@
                   <div class="form-group row">
                     <label for="inputPassword3" class="col-sm-2 col-form-label">Password Baru</label>
                     <div class="col-sm-10">
-                      <input type="text" class="form-control" id="inputPassword3" value="<?= $row->password ?>" name="password" placeholder="Password">
+                      <input type="text" class="form-control" id="inputPassword3" value="" name="password" placeholder="Password">
                     </div>
                   </div>
 
