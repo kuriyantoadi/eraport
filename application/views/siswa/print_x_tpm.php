@@ -222,27 +222,19 @@
                             </tr>
                             <tr>
                                 <th>2</th>
-                                <td>Ekonomi Bisnis</td>
-                                <td align='center'><?= $row->ekobis_p ?></td>
-                                <td align='center'><?= $row->ekobis_k ?></td>
-                                <td align='center'><?= $row->ekobis_na ?></td>
-                                <td align='center'><?= $row->ekobis_pr ?></td>
+                                <td>Fisika</td>
+                                <td align='center'><?= $row->fisika_p ?></td>
+                                <td align='center'><?= $row->fisika_k ?></td>
+                                <td align='center'><?= $row->fisika_na ?></td>
+                                <td align='center'><?= $row->fisika_pr ?></td>
                             </tr>
                             <tr>
                                 <th>3</th>
-                                <td>Administrasi Umum</td>
-                                <td align='center'><?= $row->adm_umum_p ?></td>
-                                <td align='center'><?= $row->adm_umum_k ?></td>
-                                <td align='center'><?= $row->adm_umum_na ?></td>
-                                <td align='center'><?= $row->adm_umum_pr ?></td>
-                            </tr>
-                            <tr>
-                                <th>4</th>
-                                <td>IPA</td>
-                                <td align='center'><?= $row->ipa_p ?></td>
-                                <td align='center'><?= $row->ipa_k ?></td>
-                                <td align='center'><?= $row->ipa_na ?></td>
-                                <td align='center'><?= $row->ipa_pr ?></td>
+                                <td>Kimia</td>
+                                <td align='center'><?= $row->kimia_p ?></td>
+                                <td align='center'><?= $row->kimia_k ?></td>
+                                <td align='center'><?= $row->kimia_na ?></td>
+                                <td align='center'><?= $row->kimia_pr ?></td>
                             </tr>
                             <tr>
                                 <td colspan="6">
@@ -251,35 +243,27 @@
                             </tr>
                             <tr>
                                 <th>1</th>
-                                <td align='center'>Etika Profesi</td>
-                                <td align='center'><?= $row->etika_profesi_p ?></td>
-                                <td align='center'><?= $row->etika_profesi_k ?></td>
-                                <td align='center'><?= $row->etika_profesi_na ?></td>
-                                <td align='center'><?= $row->etika_profesi_pr ?></td>
+                                <td align='center'>Gambar Teknik Otomotif</td>
+                                <td align='center'><?= $row->gtm_p ?></td>
+                                <td align='center'><?= $row->gtm_k ?></td>
+                                <td align='center'><?= $row->gtm_na ?></td>
+                                <td align='center'><?= $row->gtm_pr ?></td>
                             </tr>
                             <tr>
                                 <th>2</th>
-                                <td>Aplikasi Pengolah Angka / Spreadsheet</td>
-                                <td align='center'><?= $row->spreadsheet_p ?></td>
-                                <td align='center'><?= $row->spreadsheet_k ?></td>
-                                <td align='center'><?= $row->spreadsheet_na ?></td>
-                                <td align='center'><?= $row->spreadsheet_pr ?></td>
+                                <td>Teknologi Dasar Otomotif</td>
+                                <td align='center'><?= $row->pdtm_p ?></td>
+                                <td align='center'><?= $row->pdtm_k ?></td>
+                                <td align='center'><?= $row->pdtm_na ?></td>
+                                <td align='center'><?= $row->pdtm_pr ?></td>
                             </tr>
                             <tr>
                                 <th>3</th>
-                                <td>Akuntansi Dasar</td>
-                                <td align='center'><?= $row->akuntansi_dasar_p ?></td>
-                                <td align='center'><?= $row->akuntansi_dasar_k ?></td>
-                                <td align='center'><?= $row->akuntansi_dasar_na ?></td>
-                                <td align='center'><?= $row->akuntansi_dasar_pr ?></td>
-                            </tr>
-                            <tr>
-                                <th>4</th>
-                                <td>Perbankan Dasar</td>
-                                <td align='center'><?= $row->perbankan_dasar_p ?></td>
-                                <td align='center'><?= $row->perbankan_dasar_k ?></td>
-                                <td align='center'><?= $row->perbankan_dasar_na ?></td>
-                                <td align='center'><?= $row->perbankan_dasar_pr ?></td>
+                                <td>Pekerjaan Dasar Teknik Otomotif</td>
+                                <td align='center'><?= $row->dptm_p ?></td>
+                                <td align='center'><?= $row->dptm_k ?></td>
+                                <td align='center'><?= $row->dptm_na ?></td>
+                                <td align='center'><?= $row->dptm_pr ?></td>
                             </tr>
                             <tr>
                                 <td colspan="6">
@@ -288,43 +272,43 @@
                             </tr>
                             <tr>
                                 <th>1</th>
-                                <td>Praktikum Akuntansi Perusahaan Jasa, Dagang dan Manufaktur</td>
-                                <td align='center'><?= $row->papjd_manufaktur_p ?></td>
-                                <td align='center'><?= $row->papjd_manufaktur_k ?></td>
-                                <td align='center'><?= $row->papjd_manufaktur_na ?></td>
-                                <td align='center'><?= $row->papjd_manufaktur_pr ?></td>
+                                <td>Pemeliharaan Mesin Kendaraan Ringan</td>
+                                <td align='center'><?= $row->manufactur_p ?></td>
+                                <td align='center'><?= $row->manufactur_k ?></td>
+                                <td align='center'><?= $row->manufactur_na ?></td>
+                                <td align='center'><?= $row->manufactur_pr ?></td>
                             </tr>
                             <tr>
                                 <th>2</th>
-                                <td>Praktikum Akuntansi Lembaga/Instansi Pemerintah</td>
-                                <td align='center'><?= $row->akuntansi_lembaga_p ?></td>
-                                <td align='center'><?= $row->akuntansi_lembaga_k ?></td>
-                                <td align='center'><?= $row->akuntansi_lembaga_na ?></td>
-                                <td align='center'><?= $row->akuntansi_lembaga_pr ?></td>
+                                <td>Pemeliharaan Sasis dan Pemindahan Tenaga Kendaraan Ringan</td>
+                                <td align='center'><?= $row->bubut_p ?></td>
+                                <td align='center'><?= $row->bubut_k ?></td>
+                                <td align='center'><?= $row->bubut_na ?></td>
+                                <td align='center'><?= $row->bubut_pr ?></td>
                             </tr>
                             <tr>
                                 <th>3</th>
-                                <td>Akuntansi Keuangan</td>
-                                <td align='center'><?= $row->akuntansi_keuangan_p ?></td>
-                                <td align='center'><?= $row->akuntansi_keuangan_k ?></td>
-                                <td align='center'><?= $row->akuntansi_keuangan_na ?></td>
-                                <td align='center'><?= $row->akuntansi_keuangan_pr ?></td>
+                                <td>Pemeliharaan Kelistrikan Kendaraan Ringan</td>
+                                <td align='center'><?= $row->frais_p ?></td>
+                                <td align='center'><?= $row->frais_k ?></td>
+                                <td align='center'><?= $row->frais_na ?></td>
+                                <td align='center'><?= $row->frais_pr ?></td>
                             </tr>
                             <tr>
                                 <th>4</th>
-                                <td>Komputer Akuntansi</td>
-                                <td align='center'><?= $row->kom_akuntansi_p ?></td>
-                                <td align='center'><?= $row->kom_akuntansi_k ?></td>
-                                <td align='center'><?= $row->kom_akuntansi_na ?></td>
-                                <td align='center'><?= $row->kom_akuntansi_pr ?></td>
+                                <td>Produk Kreatif dan Kewirausahaan</td>
+                                <td align='center'><?= $row->gerinda_p ?></td>
+                                <td align='center'><?= $row->gerinda_k ?></td>
+                                <td align='center'><?= $row->gerinda_na ?></td>
+                                <td align='center'><?= $row->gerinda_pr ?></td>
                             </tr>
                             <tr>
                                 <th>5</th>
-                                <td>Administrasi Pajak</td>
-                                <td align='center'><?= $row->adm_pajak_p ?></td>
-                                <td align='center'><?= $row->adm_pajak_k ?></td>
-                                <td align='center'><?= $row->adm_pajak_na ?></td>
-                                <td align='center'><?= $row->adm_pajak_pr ?></td>
+                                <td>Produk Kreatif dan Kewirausahaan</td>
+                                <td align='center'><?= $row->cnc_cam_p ?></td>
+                                <td align='center'><?= $row->cnc_cam_k ?></td>
+                                <td align='center'><?= $row->cnc_cam_na ?></td>
+                                <td align='center'><?= $row->cnc_cam_pr ?></td>
                             </tr>
                             <tr>
                                 <th>6</th>
@@ -422,7 +406,7 @@
 
                 <h4>F. Kenaikan Kelas</h4>
                 <div class="catatan-2" style="margin-bottom: 20px;">
-                    <span>Ananda <?= $row->nama_siswa ?>ke kelas XI AKUNTANSI 1</span>
+                    <span>Ananda <?= $row->nama_siswa ?>ke kelas XI OTKP 1</span>
                 </div>
 
                 <div class="f-right">
