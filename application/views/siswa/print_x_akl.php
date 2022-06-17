@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard siswa</title>
+    <title>Raport siswa</title>
 
     <style>
         *{
@@ -87,7 +87,7 @@
         <h3 align='center'>
             LAPORAN PENCAPAIAN KOMPETENSI PESERTA DIDIK <br>
             SMK NEGERI 1 KRAGILAN KABUPATEN SERANG <br>
-            TAHUN PELAJARAN 2021/2022
+            TAHUN PELAJARAN 2022/2023
         </h3>
         <?php foreach ($tampil as $row) { ?>
 
@@ -251,7 +251,7 @@
                             </tr>
                             <tr>
                                 <th>1</th>
-                                <td align='center'>Etika Profesi</td>
+                                <td>Etika Profesi</td>
                                 <td align='center'><?= $row->etika_profesi_p ?></td>
                                 <td align='center'><?= $row->etika_profesi_k ?></td>
                                 <td align='center'><?= $row->etika_profesi_na ?></td>
@@ -344,7 +344,7 @@
 
                 <h4>B. Catatan Akademik</h4>
                 <div class="catatan" style="margin-bottom: 20px;">
-                    <span>Catatan</span>
+                    <span><?= $row->catatan_akademik ?></span>
                 </div>
 
                 <!-- <div class="border p-2 mb-3" style="height: 100px;">
@@ -422,7 +422,7 @@
 
                 <h4>F. Kenaikan Kelas</h4>
                 <div class="catatan-2" style="margin-bottom: 20px;">
-                    <span>Ananda <?= $row->nama_siswa ?>ke kelas XI AKUNTANSI 1</span>
+                    <span>Ananda <?= $row->nama_siswa ?> ke kelas XI AKUNTANSI 1</span>
                 </div>
 
                 <div class="f-right">
