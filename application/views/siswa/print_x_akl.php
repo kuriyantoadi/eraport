@@ -365,7 +365,7 @@
                             <th>1</th>
                             <td align='center'><?= $row->pkl_mitra_du_di ?></td>
                             <td align='center'><?= $row->pkl_lokasi ?></td>
-                            <td align='center'><?= $row->pkl_lamanya ?> Bulan</td>
+                            <td align='center'><?= $row->pkl_lamanya ?> </td>
                             <td align='center'><?= $row->pkl_keterangan ?></td>
                         </tr>
                     </table>
