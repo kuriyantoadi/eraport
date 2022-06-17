@@ -298,18 +298,10 @@ public function home()
 	public function siswa_pass_up()
 	{
 		$id_siswa = $this->input->post('id_siswa');
-		$nis = $this->input->post('nis');
-		$nisn_siswa = $this->input->post('nisn_siswa');
-		$nama_siswa = $this->input->post('nama_siswa');
-		$id_kelas = $this->input->post('id_kelas');
-		$semester = $this->input->post('semester');
+		$password = $this->input->post('password');
 
 		$data_edit = array(
-			'nis' => $nis,
-			'nisn_siswa' => $nisn_siswa,
-			'nama_siswa' => $nama_siswa,
-			'id_kelas' => $id_kelas,
-			'semester' => $semester,
+			'password' => sha1($password),
 		);
 
 		$this->M_admin->siswa_edit_up($data_edit, $id_siswa);
