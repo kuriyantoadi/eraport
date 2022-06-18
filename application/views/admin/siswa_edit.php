@@ -278,7 +278,7 @@
                   <div class="form-group row mb-4">
                     <label for="inputEmail3" class="col-sm-2 col-form-label">Nomor Telepon Wali Siswa</label>
                     <div class="col-sm-10">
-                      <input type="number" class="form-control" id="inputEmail3" value="<?= $row->no_telp_wali_siswa ?>" name="no_telp_wali_siswa" placeholder="Nomor Telepon Wali Siswa" required>
+                      <input type="text" class="form-control" id="inputEmail3" value="<?= $row->no_telp_wali_siswa ?>" name="no_telp_wali_siswa" placeholder="Nomor Telepon Wali Siswa" required>
                     </div>
                   </div>
 
