@@ -40,6 +40,18 @@
                     </div>
                   </div>
                   <div class="form-group row">
+                    <label for="inputEmail3" class="col-sm-2 col-form-label">Tempat Lahir</label>
+                    <div class="col-sm-10">
+                      <input type="text" class="form-control" id="inputEmail3" value="<?= $row->tempat_lahir ?>" name="nama_siswa" placeholder="Nama Siswa">
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label for="inputEmail3" class="col-sm-2 col-form-label">Tanggal Lahir</label>
+                    <div class="col-sm-10">
+                      <input type="text" class="form-control" id="inputEmail3" value="<?= $row->tgl_lahir ?>" name="nama_siswa" placeholder="Nama Siswa">
+                    </div>
+                  </div>
+                  <div class="form-group row">
                     <label for="inputPassword3" class="col-sm-2 col-form-label">Semester</label>
                     <div class="col-sm-10">
                       <select name="semester" class="form-control " style="width: 100%;" required>

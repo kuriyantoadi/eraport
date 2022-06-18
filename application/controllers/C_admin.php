@@ -184,6 +184,9 @@ public function home()
 		$nis = $this->input->post('nis');
 		$nisn_siswa = $this->input->post('nisn_siswa');
 		$nama_siswa = $this->input->post('nama_siswa');
+		$tempat_lahir = $this->input->post('tempat_lahir');
+		$tgl_lahir = $this->input->post('tgl_lahir');
+
 		$id_kelas = $this->input->post('id_kelas');
 		$semester = $this->input->post('semester');
 		$catatan_akademik = $this->input->post('catatan_akademik');
@@ -221,6 +224,8 @@ public function home()
 			'nis' => $nis,
 			'nisn_siswa' => $nisn_siswa,
 			'nama_siswa' => $nama_siswa,
+			'tempat_lahir' => $tempat_lahir,
+			'tgl_lahir' => $tgl_lahir,
 			'id_kelas' => $id_kelas,
 			'semester' => $semester,
 			'catatan_akademik' => $catatan_akademik,
