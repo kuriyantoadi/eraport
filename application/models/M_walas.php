@@ -44,6 +44,7 @@ class M_walas extends CI_Model{
     $this->db->update('tb_siswa',$data_edit);
   }
 
+
   // public function semester_1($ses_id_kelas, $id_siswa)
   // {
   //   $this->db->select('*');

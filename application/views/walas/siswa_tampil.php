@@ -36,7 +36,8 @@
                         <td><?= $row->nama_kelas ?></td>
                         <td><center>
                             <!-- <a href="<?= site_url('C_walas/semester_1/'.$row->id_siswa); ?>" class="btn btn-sm btn-primary">Semester 1</a> -->
-                            <a href="<?= site_url('C_walas/siswa_lihat/'.$row->id_siswa); ?>" class="btn btn-sm btn-primary">Lihat</a>
+                            <!-- <a href="<?= site_url('C_walas/siswa_lihat/'.$row->id_siswa); ?>" class="btn btn-sm btn-primary">Lihat</a> -->
+                            <a href="<?= site_url('C_walas/siswa_edit/'.$row->id_siswa); ?>" class="btn btn-sm btn-primary">Edit</a>
                             <a href="<?= site_url('C_walas/siswa_pass/'.$row->id_siswa); ?>" class="btn btn-sm btn-warning">Password</a>
                             <a href="<?= site_url('C_walas/siswa_hapus/'.$row->id_siswa); ?>" class="btn btn-sm btn-danger"
                               onclick="return confirm('Anda yakin menghapus data <?= $row->nama_siswa ?> ?')">Hapus</a>
