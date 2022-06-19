@@ -64,7 +64,7 @@ class C_walas extends CI_Controller {
 							</button>
 						</div>'
 					);
-		redirect ('C_walas/siswa_tampil');
+		redirect ('C_walas');
 	}
 
 	public function semester_1($id_siswa)
