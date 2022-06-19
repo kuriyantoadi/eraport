@@ -49,10 +49,12 @@ public function home()
 		$password = $this->input->post('password');
 		$id_kelas = $this->input->post('id_kelas');
 
+
 		$data_tambah = array(
 			'nama_guru' => $nama_guru,
 			'username' => $username,
 			'id_kelas' => $id_kelas,
+			'status' => 'wali_kelas',
 			'password' => sha1($password),
 		);
 
