@@ -22,7 +22,7 @@ class C_walas extends CI_Controller {
 
 		$this->load->view('template/header-walas');
     $this->load->view('walas/siswa_tampil',$data);
-		$this->load->view('template/footer-admin');
+		$this->load->view('template/footer-walas');
   }
 
 	public function siswa_lihat($id_siswa)
@@ -32,7 +32,7 @@ class C_walas extends CI_Controller {
 
 		$this->load->view('template/header-walas');
     $this->load->view('walas/siswa_lihat',$data);
-		$this->load->view('template/footer-admin');
+		$this->load->view('template/footer-walas');
   }
 
 	public function siswa_pass($id_siswa)
@@ -76,7 +76,7 @@ class C_walas extends CI_Controller {
 
 		$this->load->view('template/header-walas');
 		$this->load->view('walas/semester_1', $data);
-		$this->load->view('template/footer-admin');
+		$this->load->view('template/footer-walas');
 	}
 
 	public function semester_1_up()
