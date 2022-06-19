@@ -108,7 +108,7 @@ class C_login extends CI_Controller {
         $this->session->set_userdata('ses_id', $data['id_admin']);
         $this->session->set_userdata('ses_user', $data['username']);
         $this->session->set_userdata('ses_id_kelas', $data['id_kelas']);
-        echo "test";
+        // echo "test";
         redirect('C_walas');
 
       }elseif ($data['status']=='admin') {
@@ -125,7 +125,7 @@ class C_login extends CI_Controller {
           Username atau Password Salah<br> Silahkan Login Kembali
         </div>
         ');
-        echo "error login";
+        // echo "error login";
         redirect($url);
       }
 
