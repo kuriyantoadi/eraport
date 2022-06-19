@@ -42,7 +42,7 @@
                   <div class="form-group row">
                     <div class="offset-sm-2 col-sm-10">
                       <input type="submit" class="btn btn-info btn-sm" value="Simpan">
-                      <a href="<?= base_url() ?>C_admin" class="btn btn-sm btn-warning">Kembali</a>
+                      <a href="<?= base_url() ?>C_walas" class="btn btn-sm btn-warning">Kembali</a>
                     </div>
                   </div>
 

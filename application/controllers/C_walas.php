@@ -37,7 +37,7 @@ class C_walas extends CI_Controller {
 
 	public function siswa_pass($id_siswa)
 	{
-		$data['tampil'] = $this->M_admin->siswa_edit($id_siswa);
+		$data['tampil'] = $this->M_walas->siswa_edit($id_siswa);
 
 		$this->load->view('template/header-walas');
 		$this->load->view('walas/siswa_pass', $data);
