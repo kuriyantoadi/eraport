@@ -31,6 +31,19 @@ class M_walas extends CI_Model{
     return $query;
   }
 
+
+  function siswa_edit($id_siswa)
+  {
+    $this->db->where('id_siswa', $id_siswa);
+    $hasil = $this->db->get('tb_siswa')->result();
+    return $hasil;
+  }
+
+  function siswa_edit_up($data_edit, $id_siswa){
+    $this->db->where('id_siswa',$id_siswa);
+    $this->db->update('tb_siswa',$data_edit);
+  }
+
   // public function semester_1($ses_id_kelas, $id_siswa)
   // {
   //   $this->db->select('*');

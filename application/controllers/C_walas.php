@@ -35,6 +35,38 @@ class C_walas extends CI_Controller {
 		$this->load->view('template/footer-admin');
   }
 
+	public function siswa_pass($id_siswa)
+	{
+		$data['tampil'] = $this->M_admin->siswa_edit($id_siswa);
+
+		$this->load->view('template/header-walas');
+		$this->load->view('walas/siswa_pass', $data);
+		$this->load->view('template/footer-walas');
+	}
+
+	public function siswa_pass_up()
+	{
+		$id_siswa = $this->input->post('id_siswa');
+		$password = $this->input->post('password');
+
+		$data_edit = array(
+			'password' => sha1($password),
+		);
+
+		$this->M_walas->siswa_edit_up($data_edit, $id_siswa);
+
+		$this->session->set_flashdata('msg', '
+						<div class="alert alert-warning alert-dismissible fade show" role="alert">
+							<strong>Edit data berhasil</strong>
+
+							<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+								<span aria-hidden="true">&times;</span>
+							</button>
+						</div>'
+					);
+		redirect ('C_walas/siswa_tampil');
+	}
+
 	public function semester_1($id_siswa)
 	{
 		$ses_id_kelas = $this->session->userdata('ses_id_kelas');
